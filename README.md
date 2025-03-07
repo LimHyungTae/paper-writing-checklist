@@ -44,6 +44,8 @@
 
 # Structure of Manuscript
 
+논문을 한 번도 안 써본 이는 [나의 브런치 글](https://brunch.co.kr/@85a651d484d84f2)을 한 번 읽어보면 감이 오리라 생각된다.
+
 ## Abstract
 
 * Abstract는 manuscript와 완전히 독립된, 하나의 paragraph임
@@ -55,6 +57,9 @@
 
 ## Related works
 
+* 페이지 수가 아무리 부족하더라도(e.g., ICRA의 6장 제한이나 RA-L의 8장 제한) Related works을 생략하지 말자. 예전에 페이지가 부족해서 'Introduction and Related Works'라고 논문을 제출한 적이 있었는데, reviewer가 이 둘을 분리해라는 코멘트를 준 적이 있음. 반면, Introduction과 Related Works를 별도로 작성한 경우, 이를 다시 합치라는 피드백을 받을 가능성은 거의 없으므로, 가급적이면 두 섹션을 분리하여 구성하는 것이 바람직함. 기억하자. 논문은 **늘 먹던 비슷한 맛으로, 떨어지지 않게** 작성하는 것이 중요하다.
+* 페이지 제한이 없다면, 전략적으로 (i) baseline approach의 저자가 쓴 논문을 우겨 넣어서 인용을 하고 (ii) 가장 최신 연도의 학회의 관련 연구를 반드시 reference에 포함해야 한다(모두다 related works에서 열거해라는 의미가 아님!)
+  * 예를 들어, static map building 관련 연구인데 [ERASOR](https://arxiv.org/abs/2103.04316)나 [ERASOR2](https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/lim2023rss.pdf)가 인용에 없는 논문이 만약 나에게 리뷰가 온다면? 바로 빈정 상함 이슈로 '선행 연구가 불충분하다'라고 딴지 걸 수 있다.   
 
 ## Methodology
 
