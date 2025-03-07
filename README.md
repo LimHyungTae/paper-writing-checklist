@@ -24,14 +24,17 @@
   * 도대체 ensure consistency, ensure robustness가 무슨 뜻임?
   * (영) *ensure: to make (something) sure, certain, or safe*
     * 즉, 어떤 입력의 크기를 N개로 fix하는 등, 100이면 100 다 합당한 상황에서만 ensure을 쓰고, 그 이외에는 maintain consistency나 enhance robustness와 같이 독자가 직관적으로 이해할 수 있는 단어를 사용할 것
- 
+* 위인 이름은 첫 글자 대문자로!
+  *e.g., **K**alman filter, **G**auss-**N**ewton optimization, **L**yapunov stability, **F**ourier transform, **E**uler angle, **T**alyor series, **R**odrigues' rotation formula, etc 
 
 ## Misc
 
-* 위인 이름은 첫 글자 대문자로 (e.g., 'K'alman, 'R'odrigues, etc)
+
 * 숫자와 단위 사이에는 스페이스가 필요함
-  * Latex에는 반스페이스(`\,`)가 존재. 단위와 숫자 사이에는 `\,`를 사용하는 게 더 예쁨 (e.g., `20\,m`와 같이)
-  * %는 단위이긴 히자민 숫자와 붙여 써야 함 (e.g., 10%, 20%와 같이)
+  * Latex에는 반스페이스(`\,`)가 존재. 단위와 숫자 사이에는 `\,`를 사용하는 게 더 예쁨
+      * e.g., `20\,m`와 같이
+  * 숫자와 %는 no space로 붙여 써야 함 
+      * e.g., 10%, 20%와 같이
 
 ---
 
