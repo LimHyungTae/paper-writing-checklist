@@ -22,9 +22,9 @@
 * %가 오르는 건지, %p가 오르는 건지 잘 분간해야 함.
   * 10%에서 20%로 오르면 10% 오른 게 아니라 100%오른 거고, 10%p가 오른 것임.
 * ChatGPT가 'ensure', 'faciliate'와 같은 단어를 추천해주는데, 이와 같은 단어보다 좀 더 구체적인 단어를 쓰길
- * 도대체 ensure consistency, ensure robustness가 무슨 뜻임?
- * (영) *ensure: to make (something) sure, certain, or safe*
-  * 즉, 어떤 입력의 크기를 N개로 fix하는 등, 100이면 100 다 합당한 상황에서만 ensure을 쓰고, 그 이외에는 maintain consistency나 enhance robustness와 같이 독자가 직관적으로 이해할 수 있는 단어를 사용할 것
+  * 도대체 ensure consistency, ensure robustness가 무슨 뜻임?
+  * (영) *ensure: to make (something) sure, certain, or safe*
+    * 즉, 어떤 입력의 크기를 N개로 fix하는 등, 100이면 100 다 합당한 상황에서만 ensure을 쓰고, 그 이외에는 maintain consistency나 enhance robustness와 같이 독자가 직관적으로 이해할 수 있는 단어를 사용할 것
 
 # Figures \& Tables
 
