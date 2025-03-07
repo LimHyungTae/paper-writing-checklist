@@ -8,8 +8,10 @@
 
 ## Basic
 
-* **중요**: Latex에서 한 문장 당 한 줄에 쓸 것. Latex은 **Word처럼 문단 단위로 주저리주저리 쓰는게 아님!**. C++과 같은 compile 언어를 사용한다는 생각으로 '코딩'하는 거임
-* 
+* **중요**: Latex에서 한 문장 당 한 줄에 쓸 것. Latex은 **Word처럼 문단 단위로 주저리주저리 쓰는게 아님!**.
+  * C++과 같은 compile 언어를 사용한다는 생각으로 '코딩'하는 거임
+* 영어에서 약어는 simultaneous localization and mapping (SLAM)과 같이 쓰면 됨.
+ * 한글로 쓸 때와 규칙이 다름 주의
 
 ## Misc
 
@@ -28,6 +30,9 @@
 
 ## Abstract
 
+* Abstract는 manuscript와 완전히 독립된, 하나의 paragraph임
+ * 본문에 약어를 full로 썼더라도 abstract에서는 다시 해당 약어를 풀어서 써야 함.
+ * Abstract에서 문단 나누지 말 것
 
 ## Introduction
 
