@@ -10,7 +10,11 @@
 ## Basic
 
 * **중요**: Latex에서 한 문장 당 한 줄에 쓸 것. Latex은 **Word처럼 문단 단위로 주저리주저리 쓰는게 아님!**.
-  * C++과 같은 compile 언어를 사용한다는 생각으로 '코딩'하는 거임 #1
+  * C++과 같은 compile 언어를 사용한다는 생각으로 '코딩'하는 거임 [#1](https://github.com/LimHyungTae/paper-writing-checklist/issues/1)
+  * 실제로 저는 24년부터 논문 writing도 vim으로 하는 걸로 완전히 정착함...*Latex은 '코딩'이다*! (향후 이 관점에서 왜 overleaf을 쓰는게 fxxking shit인지 설명 예정)
+    ![image](https://github.com/user-attachments/assets/aa76e84a-9b02-4fab-a153-6d419bdb6426)
+
+      
 * 영어에서 약어는 simultaneous localization and mapping (SLAM)과 같이 쓰면 소문자로 쓰면 됨
     *  simultaneous localization and mapping (SLAM)
 * %가 오르는 건지, %p가 오르는 건지 잘 분간해야 함.
