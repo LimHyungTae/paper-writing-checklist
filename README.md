@@ -82,7 +82,7 @@
 <div align="center">
   <img src="https://github.com/user-attachments/assets/7f235091-1509-4adb-94a0-e5f549afb43f" width="70%">
 </div>
-    * 아래는 현재 내가 실제 논문 쓸 때의 예시(KISS-Matcher의 Section III.*A* 첫 부분):
+    * 아래는 현재 내가 실제 논문 쓸 때의 예시(KISS-Matcher의 Section III.A 첫 부분):
    
 ```
 \newcommand{\corr}{\mathcal{A}}
