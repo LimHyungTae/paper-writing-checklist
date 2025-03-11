@@ -37,7 +37,8 @@
   * (영) *ensure: to make (something) sure, certain, or safe*
     * 즉, 어떤 입력의 크기를 N개로 fix하는 등, 100이면 100 다 합당한 상황에서만 ensure을 쓰고, 그 이외에는 maintain consistency나 enhance robustness와 같이 독자가 직관적으로 이해할 수 있는 단어를 사용할 것
 * 논문에서 'outperform'이라는 단어를 **절대로** 쓰지 말자
-    * 그냥 'showed lower error'나 'showed higher success rate', 'showed a substantial increase in performance'와 같이 완곡한 표현을 쓸 것. 
+    * 꽤나 무례한 표현일지도,,,? 80%의 확률로 baseline approaches의 저자가 당신의 논문의 reviewer가 될 확률이 높음  
+    * 'showed lower error'나 'showed higher success rate', 'showed a substantial increase in performance'와 같이 완곡한 표현을 쓸 것. 
 * 'significant'나 'significantly'는 t-test 이후 통계적으로 유의미하다고 검증이 되었을 때만 쓸 수 있음
 * 한국에서는 특히 passive voice로 글을 써라고 많이들 가르치는데, 'we'를 써도 괜찮다. 너무 많이 쓰지만 말 것
 * 위인 이름은 첫 글자 대문자로!
@@ -69,6 +70,27 @@
   * 실제로 저는 24년부터 논문 writing도 vim으로 하는 걸로 완전히 정착함...*Latex은 '코딩'이다*!
       * (향후 이 관점에서 왜 overleaf을 쓰는게 fxxking shit인지 설명 예정)
     ![image](https://github.com/user-attachments/assets/aa76e84a-9b02-4fab-a153-6d419bdb6426)
+* `\newcommand`를 반드시 사용할 것. 위의 Rule#3의 마음가짐으로, 반드시 의미론적으로 동일한 변수의 경우는 \newcommand를 써서 글을 이어 나가자.
+   * 아래는 실제 내가 KISS-Matcher 쓸 때 쓴 Latex 코드 일부:
+  ```
+\newcommand{\corr}{\mathcal{A}}
+\newcommand{\estoutliers}{\hat{\mathcal{O}}}
+\newcommand{\srcpt}{\srcpoint_\srcidx}
+\newcommand{\tgtpt}{\tgtpoint_\tgtidx}
+
+Our objective is to align two unordered voxelized point clouds with a voxel size $v$, namely the source~$\srccloud$ and target~$\tgtcloud$ point clouds.
+To this end, we establish correspondences between the two point clouds, which is followed by robust estimation to suppress the undesirable effect of outliers. %  oovercoming the large pose discrepancy between viewpoints of $\srccloud$ and $\tgtcloud$.
+
+Formally, let us assume that the $\kth$-th pair (or the $\kth$-th correspondence) obtained through matching consists of the 3D point $\srcpoint_\srcidx \in \srccloud$ and the 3D point $\tgtpoint_\tgtidx \in \tgtcloud$.
+  ```
+   * C++, Python은 하드 코딩하지 말라고 그렇게 가르치면서, 왜 Latex은 하드코딩하는가? 반드시 `\newcommand`를 활용할 것.
+        * 왜냐하며 글을 쓰다 보면 기존에 선언한 변수를 더욱 두드러지게 표현될 수 있는 변수로 바꾸는 경우가 있는데, 이 때 위처럼 그냥 의미론적으로 변수화를 해두면 미연의 실수를 방지할 수 있음.
+        * 정신 차리고 쓰면 된다고? 다 내가 아래와 같이 휴먼 에러를 영구히 박제당한 경험으로 피토하며 얻은 교훈이니, 따라 주길...
+            * 아래는 `i`라고 쓰다가 `k`라고 쓰는 게 더 좋을 거 같다고 생각해 바꾸다가 미처 발견하지 못한 typo; see (6). [논문](https://arxiv.org/pdf/2203.06612)에 Typo 내면 꽤나 부끄럽다... 🥲🥲🥲
+
+![image](https://github.com/user-attachments/assets/7f235091-1509-4adb-94a0-e5f549afb43f)
+
+
 
 ## Misc
 
