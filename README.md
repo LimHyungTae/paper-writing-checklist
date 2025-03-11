@@ -103,7 +103,8 @@ To this end, we establish correspondences between the two point clouds, which is
 Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th correspondence) obtained through matching consists of the 3D point $\srcpt \in \srccloud$ and the 3D point $\tgtpt \in \tgtcloud$.
 ```
    * 위와 같이 써두면 final proofreading 단계에서 논문 내의 모든 동일한 변수를 손쉽게, 실수 없이 바꿀 수 있으니, **휴먼 에러를 방지할 수 있다!**
-   * 이러한 관점에서 Overleaf 쓰지 말라고 한것임...Overleaf에는 file navigation system이 없다 :(
+   * 이러한 관점에서 Overleaf 쓰지 말라고 한것임...Overleaf에는 file navigation system이 없어서 파일 내/파일-to-파일 간 왔다갔다 하는게 필연적으로 비효율적이다 :(
+       * 그러니 다들 Microsoft word에서 글 쓰듯이 주저리주저리 써버리게 됨 ㅠ
        * 요즘은 vscode나 [Pycharm](https://limhyungtae.github.io/2023-12-15-Overleaf,-TexStudio-%EB%A7%90%EA%B3%A0-Pycharm%EC%9D%98-Texify%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-LaTex-%EC%9E%91%EC%84%B1/)에서도 Latex compile이 가능하다. 가능한 자신이 원래 쓰던 IDE에서 Latex 작업도 했으면...    
 
 
@@ -145,6 +146,8 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
       * 실험을 통해 뭘 demonstrate했는지 1-2문장으로 작성
 
 ## Introduction
+
+아래와 같은 flow로 작성할 것
  
 * **WHY**  
   - 먼저, Abstract에서는의 WHY 질문을 풀어서 작성
@@ -182,8 +185,11 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
       * 예전에 Patchwork를 쓸 때 페이지가 부족해서(8장 제한) 'Introduction and Related Works'라고 한 section에 둘을 다 적어서 제출한 적이 있었는데, reviewer가 이 둘을 분리해라는 코멘트를 준 적이 있음.
       * 반면, Introduction과 Related Works를 별도로 작성한 경우, 이를 다시 합치라는 피드백을 받을 가능성은 거의 없으므로, 가급적이면 두 섹션을 분리하여 구성하는 것이 바람직함.
           * 기억하자. 논문은 **늘 먹던 비슷한 맛으로, 떨어지지 않게** 작성하는 것이 중요하다.
-* 페이지 제한이 없다면, 전략적으로 (i) baseline approach의 저자가 쓴 논문 인용을 추가로 더 하고 (ii) 가장 최신 연도의 학회의 관련 연구를 반드시 reference에 포함해야 한다(모두다 related works에서 열거해라는 의미가 아님!)
-   * 예를 들어, static map building 관련 연구인데 [ERASOR](https://arxiv.org/abs/2103.04316)나 [ERASOR2](https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/lim2023rss.pdf)가 인용에 없는 논문이 만약 나에게 리뷰가 온다면? 바로 빈정 상함 이슈로 '선행 연구가 불충분하다'라고 딴지 걸 수 있다.
+
+* 내용 관련
+   * 페이지 제한이 없다면, 전략적으로 (i) baseline approach의 저자가 쓴 논문 인용을 추가로 더 하고 (ii) 가장 최신 연도의 학회의 관련 연구를 반드시 reference에 포함해야 한다(모두다 related works에서 열거해라는 의미가 아님!)
+      * 예를 들어, static map building 관련 연구인데 [ERASOR](https://arxiv.org/abs/2103.04316)나 [ERASOR2](https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/lim2023rss.pdf)가 인용에 없는 논문이 만약 나에게 리뷰가 온다면? 바로 빈정 상함 이슈로 '선행 연구가 불충분하다'라고 딴지 걸 수 있다.
+   * 마지막 단락에서 '최종적으로 기존 연구들과는 요런 점들이 다르다'하는 것을 다시 한 번 더 강조
 
 ## Methodology
 
@@ -192,6 +198,14 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
 
 ## Experiment results
 
+* 논문의 결과를 단순히 표(Table)로만 제시하는 것보다, 다양한 형태의 표현(e.g., 그래프, 시각적 비교, 도식화)을 활용하는 것이 중요
+   * 표는 N > 5인 baseline들과 비교할 때 수치를 명확하게 전달하는 데 유용하지만, 직관적인 이해를 돕는 건 graph가 더 효과적
 
 ## Conclusion
+
+* 사실 논문의 당락에 크게 안 중요함.
+* 교수님에 따라 현재 완료(have proposed. 현재까지 유효하다는 의미를 내포)로 적거나 과거형(proposed. 무튼 논문이 끝이 났으니)으로 적거나 취향이 존재하기 때문에, 연구실에서 이전에 낸 논문들 꼭 참고할 것
+* Future plan을 간략하게 한 문장으로 작성
+   * 하지만 future plan을 작성할 때, 너무 '우리 논문의 치명적인 약점을 보완하겠다'는 식으로 적으면 안 됨.
+   * 오히려 reviewer가 'future plan에 적은 게 너무 크리티컬해보이는데?' 하고 트집 잡는 경우가 있기 때문.
 
