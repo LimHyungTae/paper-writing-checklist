@@ -102,7 +102,7 @@ To this end, we establish correspondences between the two point clouds, which is
 
 Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th correspondence) obtained through matching consists of the 3D point $\srcpt \in \srccloud$ and the 3D point $\tgtpt \in \tgtcloud$.
 ```
-   * 위와 같이 짜면 변수를 바꾸고 싶은 과정에서 자동으로 논문 내의 모든 변수를 바꿀 수 있으니, **휴먼 에러를 방지할 수 있다!**
+   * 위와 같이 써두면 final proofreading 단계에서 논문 내의 모든 동일한 변수를 손쉽게, 실수 없이 바꿀 수 있으니, **휴먼 에러를 방지할 수 있다!**
    * 이러한 관점에서 Overleaf 쓰지 말라고 한것임...Overleaf에는 file navigation system이 없다 :(
        * 요즘은 vscode나 [Pycharm](https://limhyungtae.github.io/2023-12-15-Overleaf,-TexStudio-%EB%A7%90%EA%B3%A0-Pycharm%EC%9D%98-Texify%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-LaTex-%EC%9E%91%EC%84%B1/)에서도 Latex compile이 가능하다. 가능한 자신이 원래 쓰던 IDE에서 Latex 작업도 했으면...    
 
