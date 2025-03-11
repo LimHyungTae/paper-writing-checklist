@@ -131,7 +131,7 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
 
 ## Abstract
 
-* Format 관련
+* 포맷 관련
    * Abstract는 manuscript와 완전히 독립된, 하나의 paragraph임
       * 본문에 약어를 full로 썼더라도 abstract에서는 다시 해당 약어를 풀어서 써야 함.
       * Abstract에서 문단 나누지 말 것
@@ -147,37 +147,48 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
 ## Introduction
  
 * **WHY**  
-  - 먼저, WHY 질문에 답하십시오:  
-    이 연구는 왜 중요한가? 왜 독자가 이 논문을 읽어야 하는가?  
-    왜 이 문제에 관심을 가져야 하는가? (1개 단락, 2~5문장)  
+  - 먼저, Abstract에서는의 WHY 질문을 풀어서 작성
+      * 이 연구는 왜 중요한가? 왜 독자가 이 논문을 읽어야 하는가?  
+      * 왜 이 문제에 관심을 가져야 하는가? (1개 단락, 2~5문장)  
 
 * **WHICH PROBLEM**  
-  - 다음으로, 논문에서 해결하려는 문제를 설명하십시오.  
-    어떤 문제를 해결하려고 하는가?  
-
+  - 다음으로, 논문에서 해결하려는 문제를 설명 & 기존 연구들의 한계점을 간략히 명시
+    * **주의1**: 내 연구의 반대 진영 사람들이 읽더라도 동의할 수 있게 유순하게 작성하는게 중요함
+    * **주의2**: 내 opinion과 fact를 명확히 구분지어서 주장하자.
+    * E.g., 논문을 처음 쓸 때 ``LiDAR sensors are mainly utilized for the perception of robots, as they are relatively accurate compared to other depth sensor.''이라고 적은 적이 있는데, **이 문장 하나로 reject된 적이 있음**
+       * Camera 진영에서 보았을 때는 '아닌데? LiDAR 값이 비싸서 mainly utilized되진 않는데? camera가 더 많이 쓰이는데? 님 overclaim임 ㅅㄱ'라고 반박할 수 있기 때문임.
+       * 지금의 나라면 'As LiDAR sensors measure distances using the time of flight of laser rays, they are likely to be more accurate than other depth sensors.'와 같은 식으로 썼을 듯
+           * Laser ray를 활용해서 ToF를 측정해서 거리를 재는 방식이 다른 depth measurement 방식보다 정확한 건 내 opinion이 아닌 fact이기 때문
+           * 여기서도 definite하게 모든 other depth sensors보다 무조건적으로 좋다고는 말할 수 없으므로(우리가 모르는 2억짜리 depth sensor가 있을 수도 있으니), 'likely to be' (대체로 그럼~)이라고 다소 유순하게 표현할 수 있음.
+             
 * **HOW & WHAT**  
-  - 세 번째로, 일반적으로 이 문제를 어떻게 해결할 수 있는지 간략히 설명하고,  
-    기존 연구(타 연구자들이나 이전 연구)에서 어떤 접근법이 사용되었는지 언급하십시오.  
-    본 연구의 기여 내용을 설명하기 위한 준비 단계로 활용하세요.  
-    (그러나 여기에서 본 연구의 기여를 직접적으로 설명하지는 마세요!)  
+  - 세 번째로, 일반적으로 이 문제를 어떻게 해결할 수 있는지 쪼오금 더 디테일하게 설명하고 기존 연구(타 연구자들이나 이전 연구)에서 어떤 접근법이 사용되었는지 언급
+     * 그렇다고 여기서 'Lim et al.~\cite{BLABLA} proposed'와 같이 너무 딥하게 나열하지는 말 것. 이 나열은 related works로 가야 함.
+  - 본 연구의 기여 내용을 설명하기 위한 준비 단계로 활용할 것  
+     * 그러나 여기에서 본 연구의 기여를 직접적으로 설명하지는 말 것! 다음 문단을 위한 bridge로서 활용해야 함
 
   - **논문의 motivation을 이해시키는 Fig. 1 잘 그리기**  
      * TBU 
 
 * **MAIN CONTRIBUTION & WHAT FOLLOWS FROM THAT**  
-  - 본 연구의 기여를 한 단락으로 설명하십시오. 이 단락은 매우 중요합니다.  
-  - 항상 다음과 같이 시작하는 것이 좋습니다:  
-
-    > "본 논문의 주요 기여는 …"
+  - **중요**: 본 연구의 기여를 한 단락으로 **쉽게** 설명하기 
+  - 잘 모르겠으면 다음과 같이 시작하는 것이 좋습니다:
+     - "The main contribution of this paper is a ..."
 
 ## Related works
 
-* 페이지 수가 아무리 부족하더라도(e.g., ICRA의 6장 제한이나 RA-L의 8장 제한) Related works을 **생략하지는 말자**. 예전에 Patchwork를 쓸 때 페이지가 부족해서(8장 제한) 'Introduction and Related Works'라고 한 section에 둘을 다 적어서 제출한 적이 있었는데, reviewer가 이 둘을 분리해라는 코멘트를 준 적이 있음. 반면, Introduction과 Related Works를 별도로 작성한 경우, 이를 다시 합치라는 피드백을 받을 가능성은 거의 없으므로, 가급적이면 두 섹션을 분리하여 구성하는 것이 바람직함. 기억하자. 논문은 **늘 먹던 비슷한 맛으로, 떨어지지 않게** 작성하는 것이 중요하다.
-* 페이지 제한이 없다면, 전략적으로 (i) baseline approach의 저자가 쓴 논문을 우겨 넣어서 인용을 추가로 더 하고 (ii) 가장 최신 연도의 학회의 관련 연구를 반드시 reference에 포함해야 한다(모두다 related works에서 열거해라는 의미가 아님!)
-  * 예를 들어, static map building 관련 연구인데 [ERASOR](https://arxiv.org/abs/2103.04316)나 [ERASOR2](https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/lim2023rss.pdf)가 인용에 없는 논문이 만약 나에게 리뷰가 온다면? 바로 빈정 상함 이슈로 '선행 연구가 불충분하다'라고 딴지 걸 수 있다.
+* 포맷 관련
+   * 페이지 수가 아무리 부족하더라도(e.g., ICRA의 6장 제한이나 RA-L의 8장 제한) Related works을 **생략하지는 말자**.
+      * 예전에 Patchwork를 쓸 때 페이지가 부족해서(8장 제한) 'Introduction and Related Works'라고 한 section에 둘을 다 적어서 제출한 적이 있었는데, reviewer가 이 둘을 분리해라는 코멘트를 준 적이 있음.
+      * 반면, Introduction과 Related Works를 별도로 작성한 경우, 이를 다시 합치라는 피드백을 받을 가능성은 거의 없으므로, 가급적이면 두 섹션을 분리하여 구성하는 것이 바람직함.
+          * 기억하자. 논문은 **늘 먹던 비슷한 맛으로, 떨어지지 않게** 작성하는 것이 중요하다.
+* 페이지 제한이 없다면, 전략적으로 (i) baseline approach의 저자가 쓴 논문 인용을 추가로 더 하고 (ii) 가장 최신 연도의 학회의 관련 연구를 반드시 reference에 포함해야 한다(모두다 related works에서 열거해라는 의미가 아님!)
+   * 예를 들어, static map building 관련 연구인데 [ERASOR](https://arxiv.org/abs/2103.04316)나 [ERASOR2](https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/lim2023rss.pdf)가 인용에 없는 논문이 만약 나에게 리뷰가 온다면? 바로 빈정 상함 이슈로 '선행 연구가 불충분하다'라고 딴지 걸 수 있다.
 
 ## Methodology
 
+* 반드시 독자에게 개요를 제공하고, 구체적인 방법을 설명할 것.
+* 논문은 독자가 이해할 수 있도록 작성해야 하는 글이다. 먼저 숲을 보여준 뒤 나무를 설명하는 것과, 바로 숲속에 던져버린 채 나무만 깊이 설명하는 것을 비교했을 때, 전자가 훨씬 더 이해하기 쉽다.
 
 ## Experiment results
 
