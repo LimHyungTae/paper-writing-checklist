@@ -65,32 +65,44 @@
 
 ## Basic
 
-* **중요**: Latex에서 한 문장 당 한 줄에 쓸 것. Latex은 **Word처럼 문단 단위로 주저리주저리 쓰는게 아님!**.
+* **중요1**: Latex에서 한 문장 당 한 줄에 쓸 것. Latex은 **Word처럼 문단 단위로 주저리주저리 쓰는게 아님!**.
   * C++과 같은 compile 언어를 사용한다는 생각으로 '코딩'하는 거임 [#1](https://github.com/LimHyungTae/paper-writing-checklist/issues/1)
   * 실제로 저는 24년부터 논문 writing도 vim으로 하는 걸로 완전히 정착함...*Latex은 '코딩'이다*!
       * (향후 이 관점에서 왜 overleaf을 쓰는게 fxxking shit인지 설명 예정)
     ![image](https://github.com/user-attachments/assets/aa76e84a-9b02-4fab-a153-6d419bdb6426)
-* `\newcommand`를 반드시 사용할 것. 위의 Rule#3의 마음가짐으로, 반드시 의미론적으로 동일한 변수의 경우는 \newcommand를 써서 글을 이어 나가자.
-   * 아래는 실제 내가 KISS-Matcher 쓸 때 쓴 Latex 코드 일부:
+* **중요2**: `\newcommand`를 반드시 사용할 것.
+   * 위의 Rule#3의 마음가짐으로, 휴먼 에러를 줄이기 위해 반드시 의미론적으로 동일한 변수의 경우는 \newcommand를 써서 글을 이어 나가자.
+   * C++, Python은 하드 코딩하지 말라고 그렇게 가르치면서, 왜 Latex은 하드코딩하는가? 반드시 `\newcommand`를 활용할 것.
+        * 왜냐하며 글을 쓰다 보면 기존에 선언한 변수를 더욱 두드러지게 표현될 수 있는 변수로 바꾸는 경우가 있기 때문.
+            * Latex 코드도 교수님과의 첨삭 과정에서 많은 부분이 수정되기 때문에, '수정을 더 용이하게' 미리 짜두는 것이 중요하다.  
+        * 정신 차리고 쓰면 된다고? 다 내가 아래와 같이 휴먼 에러를 영구히 박제당한 경험으로 피토하며 얻은 교훈이니 꼭 좀 따라 주길...
+            * 아래는 `i`라고 쓰다가 `k`라고 쓰는 게 더 좋을 거 같다고 생각해 바꾸다가 미처 발견하지 못한 typo; see (6).
+            *  [논문](https://arxiv.org/pdf/2203.06612)에 Typo 내면 꽤나 부끄럽다... 🥲🥲🥲
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/7f235091-1509-4adb-94a0-e5f549afb43f" width="70%">
+</div>
+    * 아래는 실제 내가 KISS-Matcher 쓸 때 쓴 Latex 코드 일부 예시:
+   
 ```
 \newcommand{\corr}{\mathcal{A}}
 \newcommand{\estoutliers}{\hat{\mathcal{O}}}
+\newcommand{\srccloud}{\mathcal{P}}
+\newcommand{\tgtcloud}{\mathcal{Q}}
+\newcommand{\srcpoint}{\boldsymbol{a}}
+\newcommand{\tgtpoint}{\boldsymbol{b}}
+\newcommand{\srcidx}{i}
+\newcommand{\tgtidx}{j}
+\newcommand{\corridx}{k}
 \newcommand{\srcpt}{\srcpoint_\srcidx}
 \newcommand{\tgtpt}{\tgtpoint_\tgtidx}
 
 Our objective is to align two unordered voxelized point clouds with a voxel size $v$, namely the source~$\srccloud$ and target~$\tgtcloud$ point clouds.
-To this end, we establish correspondences between the two point clouds, which is followed by robust estimation to suppress the undesirable effect of outliers. %  oovercoming the large pose discrepancy between viewpoints of $\srccloud$ and $\tgtcloud$.
+To this end, we establish correspondences between the two point clouds, which is followed by robust estimation to suppress the undesirable effect of outliers.
 
-Formally, let us assume that the $\kth$-th pair (or the $\kth$-th correspondence) obtained through matching consists of the 3D point $\srcpoint_\srcidx \in \srccloud$ and the 3D point $\tgtpoint_\tgtidx \in \tgtcloud$.
+Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th correspondence) obtained through matching consists of the 3D point $\srcpt \in \srccloud$ and the 3D point $\tgtpt \in \tgtcloud$.
 ```
 
-   * C++, Python은 하드 코딩하지 말라고 그렇게 가르치면서, 왜 Latex은 하드코딩하는가? 반드시 `\newcommand`를 활용할 것.
-        * 왜냐하며 글을 쓰다 보면 기존에 선언한 변수를 더욱 두드러지게 표현될 수 있는 변수로 바꾸는 경우가 있는데, 이 때 위처럼 그냥 의미론적으로 변수화를 해두면 미연의 실수를 방지할 수 있음.
-        * 정신 차리고 쓰면 된다고? 다 내가 아래와 같이 휴먼 에러를 영구히 박제당한 경험으로 피토하며 얻은 교훈이니, 따라 주길...
-            * 아래는 `i`라고 쓰다가 `k`라고 쓰는 게 더 좋을 거 같다고 생각해 바꾸다가 미처 발견하지 못한 typo; see (6). [논문](https://arxiv.org/pdf/2203.06612)에 Typo 내면 꽤나 부끄럽다... 🥲🥲🥲
-
-![image](https://github.com/user-attachments/assets/7f235091-1509-4adb-94a0-e5f549afb43f)
 
 
 
