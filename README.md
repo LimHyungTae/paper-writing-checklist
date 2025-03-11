@@ -72,7 +72,8 @@
     ![image](https://github.com/user-attachments/assets/aa76e84a-9b02-4fab-a153-6d419bdb6426)
 * `\newcommand`를 반드시 사용할 것. 위의 Rule#3의 마음가짐으로, 반드시 의미론적으로 동일한 변수의 경우는 \newcommand를 써서 글을 이어 나가자.
    * 아래는 실제 내가 KISS-Matcher 쓸 때 쓴 Latex 코드 일부:
-  ```
+
+```
 \newcommand{\corr}{\mathcal{A}}
 \newcommand{\estoutliers}{\hat{\mathcal{O}}}
 \newcommand{\srcpt}{\srcpoint_\srcidx}
@@ -82,7 +83,8 @@ Our objective is to align two unordered voxelized point clouds with a voxel size
 To this end, we establish correspondences between the two point clouds, which is followed by robust estimation to suppress the undesirable effect of outliers. %  oovercoming the large pose discrepancy between viewpoints of $\srccloud$ and $\tgtcloud$.
 
 Formally, let us assume that the $\kth$-th pair (or the $\kth$-th correspondence) obtained through matching consists of the 3D point $\srcpoint_\srcidx \in \srccloud$ and the 3D point $\tgtpoint_\tgtidx \in \tgtcloud$.
-  ```
+```
+
    * C++, Python은 하드 코딩하지 말라고 그렇게 가르치면서, 왜 Latex은 하드코딩하는가? 반드시 `\newcommand`를 활용할 것.
         * 왜냐하며 글을 쓰다 보면 기존에 선언한 변수를 더욱 두드러지게 표현될 수 있는 변수로 바꾸는 경우가 있는데, 이 때 위처럼 그냥 의미론적으로 변수화를 해두면 미연의 실수를 방지할 수 있음.
         * 정신 차리고 쓰면 된다고? 다 내가 아래와 같이 휴먼 에러를 영구히 박제당한 경험으로 피토하며 얻은 교훈이니, 따라 주길...
