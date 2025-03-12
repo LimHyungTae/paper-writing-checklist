@@ -27,7 +27,7 @@
 아래는 낸 논문의 ${SECTION} 부분이야
 
 .
-.
+(본문 내용)
 .
 
 위의 문장들에서 오탈자나 수일치, 문법 등 틀린 부분을 proofread해주고, 틀린 부분이 있으면 개조식으로 line-by-line으로 간략히 알려 줘
@@ -45,15 +45,17 @@
 
 ## 당장 도움되는 English Writing Tips
 
-* 논문 쓰는 것 자체가 처음이라면? 사실 영어 writing이 중요한 게 아니라, '논문'이라는 것의 이해도를 먼저 높이는 게 중요함. [한글로 설명된 이 글](https://brunch.co.kr/@85a651d484d84f2/2)을 한 번 읽어보는 것을 추천.
+* 논문 쓰는 것 자체가 처음이라면? 사실 영어 writing이 중요한 게 아니라, '논문'이라는 것의 이해도를 먼저 높이는 게 중요함
+   * [한글로 설명된 이 글](https://brunch.co.kr/@85a651d484d84f2/2)을 한 번 읽어보는 것을 추천.
 * 한 문단에서는 하나의 key message만 존재해야 함
-   * 글을 다쓰고 각 문단 별 길이를 살펴보자. 문단의 길이가 너무 길거나 (> 10) 짧으면 (< 3) 무엇을 key sentence로 다시 얘기해야할지 글의 flow를 점검해보자.    
+   * 글을 다 쓴 후, 각 문단 별 길이를 살펴보자. 문단의 길이가 너무 길거나 (> 10) 짧으면 (< 3) 해당 문단의 key sentence가 명확히 잡히지 않은 것이다. 글의 flow를 스스로 점검해보자.    
 * 영어는 명사형으로 쓰는 게 자연스러움
    * He cooks well (x)이라고 하지 않고, He's a good cook (o)라고 하는 게 외국인 입장에서 자연스러움.
    * 적용 예시: *Our approach is robust, accurate and fast*라고 쓰는 거 보다 *we propose a robust, accurate, and fast approach*라고 쓰는 게 더 자연스러움
-* 자기가 잘 모르는 영어 단어를 쓰고자 한다면 반드시 영영 사전에서의 의미를 읽어보고, 실제로 어떻게 사용되는지 구글이나 사전에서 예시 문장을 통해 확인할 것 
+* 자기가 잘 모르는 영어 단어를 쓰고자 한다면 반드시 영영 사전에서의 의미를 읽어보고, 실제로 어떻게 사용되는지 구글이나 사전에서 예시 문장을 통해 확인할 것
+   * [ludwig](https://ludwig.guru/)로 해당 단어나 문장 구가 실제로 쓰이는지 확인해봐야 함! (근데 하루 횟수 제한이 있음)
    * 한글로 비유하자면, 검열, 검수, 검토, 검사가 다 타인이 무언가를 살펴보고 확인한다는 의미를 지닌 단어이지만, 각기 다르게 쓰이는 걸 한국인이라면 알 것이다.
-      * 그 누구도 교수님께 '교수님 검열 부탁드립니다'하고 논문을 보내지 않지 않는가? 하지만 한글을 어중간하게 아는 외국인 입장에서는 '오우, 검열? Such a novel word for me'하고 쓸 수도 있다.
+      * 그 누구도 교수님께 '교수님 검열 부탁드립니다'하고 논문을 보내지 않지 않는가? 하지만 한글을 어중간하게 할줄 아는 외국인 입장에서는 '오우, 검열? Such a novel word for me'하고 쓸 수도 있다.
       * 이처럼 언어 마다 각 단어가 지니는 늬앙스가 존재하기 때문에, 이를 잘 살펴봐야 함(특히 우리같은 non-English spoken world의 연구자라면 더더욱...). 
 * 영어에서 약어는 simultaneous localization and mapping (SLAM)과 같이 쓰면 소문자로 쓰면 됨
     *  simultaneous localization and mapping (SLAM)
@@ -66,7 +68,9 @@
        * 근데 baseline approaches를 글에서 과도하게 난도질해버린다면? 
     * 'showed lower error'나 'showed higher success rate', 'showed a substantial increase in performance'와 같이 완곡한 표현을 쓸 것. 
 * 'significant'나 'significantly'는 t-test 이후 통계적으로 유의미하다고 검증이 되었을 때만 쓸 수 있음
-* 한국에서는 특히 passive voice로 글을 써라고 많이들 가르치는데, 'we'를 써도 괜찮다. 너무 많이 쓰지만 말 것
+    * 'substantially'을 활용하자
+* 한국에서는 특히 passive voice로 글을 써라고 많이들 가르치는데, 'we'를 써도 괜찮다.
+    * 논문은 주장글이기 때문! 다만 methodology 부분에서는 너무 많이 쓰지 말 것
 * 위인 이름은 첫 글자 대문자로!
   * e.g., **K**alman filter, **G**auss-**N**ewton optimization, **L**yapunov stability, **F**ourier transform, **E**uler angle, **T**alyor series, **R**odrigues' rotation formula, etc 
 * Eigenvector와 eigenvalue는 no space로 붙여 써야 함
@@ -221,6 +225,9 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
 
 ## Methodology
 
+* (내 취향) Section의 제목을 'Method', 혹은 'Methodology'라고 적지 말 것.
+   * 이걸 모르는 이가 어디 있겠는가? 그러니 method가 정확히 뭘 위함인지 간지나게 한 번 더 표현해주는게 중요하다
+     * e.g., "KISS-MATCHER: ROBUST, FAST, AND SCALABLE OUTLIER-ROBUST REGISTRATION"     
 * 반드시 독자에게 개요를 제공하고, 구체적인 방법을 설명할 것.
 * 논문은 독자가 이해할 수 있도록 작성해야 하는 글이다. 먼저 숲을 보여준 뒤 나무를 설명하는 것과, 바로 숲속에 던져버린 채 나무만 깊이 설명하는 것을 비교했을 때, 전자가 훨씬 더 이해하기 쉽다.
 
@@ -234,6 +241,9 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
 * 사실 논문의 당락에 크게 영향을 미치지는 않음.
 * 교수님에 따라 현재 완료형(have proposed. 현재까지 유효하다는 의미를 내포)이나 과거형(proposed. 무튼 논문이 이미 완료되었음을 강조)을 사용하는 취향이 다를 수 있으므로, 연구실에서 이전에 낸 논문들 꼭 참고할 것
 * Future plan을 간략하게 한 문장으로 작성
-   * 하지만 future plan을 작성할 때, '우리 논문의 치명적인 약점을 보완하겠다'는 식으로 적어서는 안 됨.
-   * 오히려 reviewer가 'future plan에 적은 게 너무 크리티컬해보이는데?' 하고 트집 잡는 경우가 있기 때문.
+   * 그렇다고 future plan을 작성할 때, '우리 논문의 치명적인 약점을 보완하겠다'는 식으로 적어서는 안 됨.
+      * 오히려 reviewer가 'future plan에 적은 게 너무 크리티컬해보이는데?' 하고 트집 잡는 경우가 있기 때문.
+      * real-world 로봇에 적용해 보겠다, 속도를 '더' 빠르게 해보겠다 등 진부하지만 책 잡히지 않는 전형적인 멘트를 쓰는 것이 좋다
+        * Example 1. [KISS-Matcher](https://arxiv.org/pdf/2409.15615)에서는 "In future works, we plan to apply our matching pipeline in mapping and localization applications."
+        * Example 2. [BUFFER-X](https://arxiv.org/pdf/2503.07940)에서는 "In future works, we plan to study how to boost the inference speed for better usability."  
 
