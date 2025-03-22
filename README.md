@@ -79,6 +79,15 @@
   * e.g., **K**alman filter, **G**auss-**N**ewton optimization, **L**yapunov stability, **F**ourier transform, **E**uler angle, **T**alyor series, **R**odrigues' rotation formula, etc 
 * Eigenvector와 eigenvalue는 no space로 붙여 써야 함
 * Keypoint도 key point라고 쓰는 거 보다 붙여 쓰는 게 맞음
+* 영어에서는 1~5와 같이 범위를 나타낼 때는 1-5로 나타냄. ~는 approximated의 의미로 사용됨.
+* Hyphen(-)을 남용하지 말자. 부사 + 형용사에는 굳이 -을 쓸 필요 없음. 명사 + 형용사의 경우에만 -를 사용한다.
+  * e.g. tightly-coupled (x), tightly coupled (o), outlier-robust (o)    
+* 뭐시기-based로 쓸 때는 꼭 hyphen을 넣어야 함
+   * ResNet based approach (x), ResNet-based approach (o)
+      * 위의 명사 + 형용사의 케이스와 같음  
+* 부사를 사용할 때는 동사 앞에 배치하는 게 더 clear함 (근데 Grammarly는 제일 뒤에 배치하라고 함 주의. Grammarly를 따르지 말자)
+  * e.g., enhanced [...] effectively (x), effectively enhanced (o)
+
 
 ### 영어 공부할 때 읽어보면 좋은 글/논문들 (To 나의 미래 대학원생들에게)
 
@@ -159,6 +168,9 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
 ---
 
 # Figures \& Tables
+
+* 숫자가 있다면 단위가 잘 기입되었는지 반드시 확인하자.
+    * 숫자 자체가 중요한 게 아니라 '무엇의' 숫자인지를 명시적으로 나타내는 게 훨씬 중요하다는 것을 잊지 말자.
 
 ---
 
