@@ -4,4 +4,4 @@
     * (❌) "[5] proposed BLABLA" or "BLABLA was proposed in [5]"
     * (⭕) Lim \textit{et al.} [5] proposed BLABLA.
   
-2.  
+2.  Caption 상에 subcaption인 (a), (b), 등을 명사로 사용하지 말 것 
