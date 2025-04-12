@@ -124,13 +124,13 @@
             * 아래는 `i`라고 쓰다가 `k`라고 쓰는 게 더 좋을 거 같다고 생각해 바꾸다가 미처 발견하지 못한 typo; see (6).
             *  [논문](https://arxiv.org/pdf/2203.06612)에 Typo 내면 꽤나 부끄럽다... 🥲🥲🥲
    * **실수 예시 1.** 논문을 처음 쓰면 다른 형태의 문자 != 다른 변수라는 개념이 잘 잡혀있지 않아서 아래와 같이 `k`를 다른 표기로 하는 등의 실수를 빈번히 함. 
-        * Sol) `k`를 `\newcommand{\stateidx}{k}`와 표현해서 싸용하면 휴먼 에러를 줄일 수 있음
-     
+        * Sol) `k`를 `\newcommand{\timestep}{k}`와 표현해서 싸용하면 휴먼 에러를 줄일 수 있음
+   
 ![wrong_ks](https://github.com/user-attachments/assets/5d9b47ff-16d4-4e33-85af-44ca77da434f)
 
-       * **실수 예시 2.** 실제로 MambaGlue를 작성할 때 최종 단계에서 아래와 같이 변수가 vector이기 떄문에 `\matbhf{}`를 해야하는데 깜빡한 실수가 있었음.
-            * Sol) \newcommand{\state}{\mathbf{x}}처럼 미리 정의해두었으면 신경 쓰지 않아도 될 부분인데, 일일이 확인해야 해서 번거로움
-
+   * **실수 예시 2.** 실제로 MambaGlue를 작성할 때 최종 단계에서 아래와 같이 변수가 vector이기 떄문에 `\matbhf{}`를 해야하는데 깜빡한 실수가 있었음.
+        * Sol) \newcommand{\state}{\mathbf{x}}처럼 미리 정의해두었으면 신경 쓰지 않아도 될 부분인데, 일일이 확인해야 해서 번거로움
+  
 ![image](https://github.com/user-attachments/assets/82d0efb7-43e7-42f4-a749-042661959426)
 
 
