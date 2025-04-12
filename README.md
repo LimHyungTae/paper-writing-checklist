@@ -100,7 +100,7 @@
 "아니 ㅋㅋ 나르시시스트 뭐냐고" 할 수도 있겠지만, 위의 논문들은 두 명 이상의 교수님이 여러 번 검토해 준 글이라 특정 개인의 편향이 상대적으로 적다고 생각함. 
 또한, 나의 scientific writing에 대해 말하자면, 명현 교수님께 논문을 엄밀하게 쓰는 테크닉들을 직/간접적으로 많이 배워서 어느정도 글을 잘 쓴다고 생각하고 있었는데, 22년에 Cyrill 교수님 랩에 visiting scholar로 가서 '독자가 읽기 편한 글을 쓰는 법'에 대해서 아래와 같이 (감사하게도) 혹독하게 트레이닝 당함:
 
-<img width="282" alt="image" src="https://github.com/user-attachments/assets/4833729c-df28-4928-908e-688ae539b7ce" />
+<img width="350" alt="image" src="https://github.com/user-attachments/assets/4833729c-df28-4928-908e-688ae539b7ce" />
 
 (+ Cyrill 교수님의 이 [scientific writing 강좌](https://www.youtube.com/watch?v=QYbAvOPcy0s&t=1153s)를 꼭 볼 것을 추천)
 
