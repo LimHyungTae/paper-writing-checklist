@@ -128,8 +128,9 @@
      
 ![wrong_ks](https://github.com/user-attachments/assets/5d9b47ff-16d4-4e33-85af-44ca77da434f)
 
-   * **실수 예시 2.** 실제로 MambaGlue를 작성할 때 최종 단계에서 아래와 같이 변수가 vector이기 떄문에 `\matbhf{}`를 해야하는데 깜빡한 실수가 있었음.
-        * Sol) \newcommand{\state}{\mathbf{x}}처럼 미리 정의해두었으면 신경 쓰지 않아도 될 부분인데, 일일이 확인해야 해서 번거로움
+       * **실수 예시 2.** 실제로 MambaGlue를 작성할 때 최종 단계에서 아래와 같이 변수가 vector이기 떄문에 `\matbhf{}`를 해야하는데 깜빡한 실수가 있었음.
+            * Sol) \newcommand{\state}{\mathbf{x}}처럼 미리 정의해두었으면 신경 쓰지 않아도 될 부분인데, 일일이 확인해야 해서 번거로움
+
 ![image](https://github.com/user-attachments/assets/82d0efb7-43e7-42f4-a749-042661959426)
 
 
