@@ -162,9 +162,18 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
        * 그러니 다들 Microsoft word에서 글 쓰듯이 주저리주저리 써버리게 됨 ㅠ
        * 요즘은 vscode나 [Pycharm](https://limhyungtae.github.io/2023-12-15-Overleaf,-TexStudio-%EB%A7%90%EA%B3%A0-Pycharm%EC%9D%98-Texify%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-LaTex-%EC%9E%91%EC%84%B1/)에서도 Latex compile이 가능하다. 가능한 자신이 원래 쓰던 IDE에서 Latex 작업도 했으면...    
 
-* **중요3**: Use below packages
+* **중요3**: Use below packages (On writing...to be updated in Korean)
 
-```
+Compresses numerical citations:
+\cite{ref41,ref42,ref43,ref44,ref45,ref46} → [41–46]
+
+Orders them automatically even if you write \cite{ref43,ref41,ref42} → [41–43]
+
+\usepackage{cite} 
+
+Do not use natbib with cite; they conflict.
+
+
 \usepackage{cleveref} % Should be placed after 'hyperref'!
 \renewcommand{\figurename}{Fig.} % 'Figure' to 'Fig.'
 
