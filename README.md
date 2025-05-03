@@ -162,19 +162,16 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
        * 그러니 다들 Microsoft word에서 글 쓰듯이 주저리주저리 써버리게 됨 ㅠ
        * 요즘은 vscode나 [Pycharm](https://limhyungtae.github.io/2023-12-15-Overleaf,-TexStudio-%EB%A7%90%EA%B3%A0-Pycharm%EC%9D%98-Texify%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-LaTex-%EC%9E%91%EC%84%B1/)에서도 Latex compile이 가능하다. 가능한 자신이 원래 쓰던 IDE에서 Latex 작업도 했으면...    
 
-* **중요3**: Use below packages (On writing...to be updated in Korean)
+* **중요3**: Latex에 생각보다 자동화할 수 있는 유용한 packages가 많으니, 잘 활용하자
+- `\usepackage{cite}`: 아래와 같이 citation을 간략하게 써주고, 순서도 알아서 적절히 수정해주는 역할을 함 
+      - Compresses numerical citations: \cite{ref41,ref42,ref43,ref44,ref45,ref46} → [41–46]
+      - Orders them automatically even if you write \cite{ref43,ref41,ref42} → [41–43]
+      - `natbib`와 동시에 사용하면 충돌이 날 수도 있음
+- `\usepackage{cleveref}` % Should be placed after 'hyperref'!
+      - 번거롭게 `Fig.~\ref{fig:fig1}`와 같이 안 써도 되고 `\Cref{fig:fig1}`와 같이 간략하게 표현하면, Table이든 Fig든 알아서 pointing해 줌
+      - 아래와 같이 추가적인 명령어들로 각 요소를 어떻게 refer할지도 세팅할 수 있음
 
-Compresses numerical citations:
-\cite{ref41,ref42,ref43,ref44,ref45,ref46} → [41–46]
-
-Orders them automatically even if you write \cite{ref43,ref41,ref42} → [41–43]
-
-\usepackage{cite} 
-
-Do not use natbib with cite; they conflict.
-
-
-\usepackage{cleveref} % Should be placed after 'hyperref'!
+```
 \renewcommand{\figurename}{Fig.} % 'Figure' to 'Fig.'
 
 \Crefname{section}{Sec.}{Secs.} 
@@ -183,14 +180,16 @@ Do not use natbib with cite; they conflict.
 % To simplify Equation (#) to (#)
 \crefname{equation}{}{}
 \Crefname{equation}{}{}
+```
+- 개인 취향이지만 "Fig. #:"나 "Table #:"를 각각 "Fig. #."와  to "Table #."로 바꾸기 위해서는
 
 ```
-
-\Cref{fig:fig1}
-
-"Fig. #:" to "Fig. #.", "Table #:" to "Table #."
 \captionsetup[figure]{labelformat={default},labelsep=period,name={fig.}}
 \captionsetup[table]{labelformat={default},labelsep=period,name={table}}
+```
+
+를 세팅하면 됨. **NOTE:** 저 점(.)의 의미는 약어임을 나타내는 용도이기 때문에, Table의 경우 뒤에 .이 오면 안 된다. 논문을 처음 쓰는 후배들이 빈번히 실수하는 부분.
+- 예시: Table 1 (o), Table. 1 (x)
 
 ---
 
