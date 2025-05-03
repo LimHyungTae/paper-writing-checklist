@@ -167,7 +167,7 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
       - Compresses numerical citations: \cite{ref41,ref42,ref43,ref44,ref45,ref46} → [41–46]
       - Orders them automatically even if you write \cite{ref43,ref41,ref42} → [41–43]
       - `natbib`와 동시에 사용하면 충돌이 날 수도 있음
-- `\usepackage{cleveref}`: 번거롭게 `Fig.~\ref{fig:fig1}`와 같이 안 써도 되고 `\Cref{fig:fig1}`와 같이 간략하게 표현하면, Table이든 Fig든 알아서 pointing해 줌. 아래와 같이 추가적인 명령어들로 각 요소를 어떻게 refer할지도 세팅할 수 있음. ₩₩ㅑㄴㅇ₩ㅇㅇㅇ`\usepackage{hyperref}`를 선언한 후에 선언해 줘야 함:
+- `\usepackage{cleveref}`: 번거롭게 `Fig.~\ref{fig:fig1}`와 같이 안 써도 되고 `\Cref{fig:fig1}`와 같이 간략하게 표현하면, Table이든 Fig든 알아서 pointing해 줌. 아래와 같이 추가적인 명령어들로 각 요소를 어떻게 refer할지도 세팅할 수 있음. 근데 선언할 때 `\usepackage{hyperref}`를 선언한 후에 선언해 줘야 함. 아래는 포매팅을 바꾸는 예시
 
 ```
 \renewcommand{\figurename}{Fig.} % 'Figure' to 'Fig.'
