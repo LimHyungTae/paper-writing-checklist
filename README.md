@@ -188,6 +188,12 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
 
 를 세팅하면 됨. 
 
+- (URL 한정) 명현 교수님의 취향으로, section의 reference가 III-B가 아닌, 논문에서 표현되는 것과 동일하게 III.\texit{B}로 보이게 하려면 아래와 같이 renew command를 활용하면 됨
+```
+\renewcommand{\thesubsection}{\thesection.\textit{\Alph{subsection}}}
+\renewcommand{\thesubsubsection}{\thesection.\textit{\Alph{subsection}}\arabic{subsubsection}}
+```
+
 **NOTE:** 저 점(.)의 의미는 약어임을 나타내는 용도이기 때문에, Table의 경우 뒤에 .이 오면 안 된다. 논문을 처음 쓰는 후배들이 빈번히 실수하는 부분.
 - 예시: Table 1 (o), Table. 1 (x)
 
