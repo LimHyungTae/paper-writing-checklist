@@ -309,3 +309,11 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
         * Example 1. [KISS-Matcher](https://arxiv.org/pdf/2409.15615)에서는 "In future works, we plan to apply our matching pipeline in mapping and localization applications."
         * Example 2. [BUFFER-X](https://arxiv.org/pdf/2503.07940)에서는 "In future works, we plan to study how to boost the inference speed for better usability."  
 
+## Acknowledgements
+
+LaTeX 문서에서 Acknowledgments’(감사의 말) 섹션을 작성할 때는 section에 *을 붙여야 함. *을 붙이게 되면 문서 목차에는 포함되지 않지만, 해당 위치에 제목이 출력됨
+
+```
+% e.g.
+\section*{Acknowledgments}
+```
