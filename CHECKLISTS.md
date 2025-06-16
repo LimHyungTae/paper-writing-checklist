@@ -23,7 +23,7 @@
    * Table, Fig.의 대소문자가 제대로 되어 있는지
    * Fig #(a)와 같이 잘 되어 있는지 (Fig. # (a)로 space를 넣으면 ❌)
    확인
-
+4. \Cref 사용
 ### 오탈자 관련
 
 1. Grammarly / ChatGPT 등으로 최종 오탈자를 확인했는지?
@@ -31,7 +31,12 @@
 
 ![typos](https://github.com/user-attachments/assets/5a008196-3c87-467d-9709-8cc456f20e2f)
 
-6. 
+### 수식 관련  
+
+\begin{equation}을 linebreak 없이 이전 line과 붙여 썼는지
+\end{equation} 부분에 linebreak 없이 문장을 붙여 썼는지
+
+
  
 ---
 
