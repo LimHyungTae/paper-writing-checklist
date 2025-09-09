@@ -59,20 +59,22 @@
 * 자기가 잘 모르는 영어 단어를 쓰고자 한다면 반드시 영영 사전에서의 의미를 읽어보고, 실제로 어떻게 사용되는지 구글이나 사전에서 예시 문장을 통해 확인할 것
    * [ludwig](https://ludwig.guru/)로 해당 단어나 문장 구가 실제로 쓰이는지 확인해봐야 함! (근데 하루 횟수 제한이 있음)
    * 한글로 비유하자면, 검열, 검수, 검토, 검사가 다 타인이 무언가를 살펴보고 확인한다는 의미를 지닌 단어이지만, 각기 다르게 쓰이는 걸 한국인이라면 알 것이다.
-      * 그 누구도 교수님께 '교수님 검열 부탁드립니다'하고 논문을 보내지 않지 않는가? 하지만 한글을 어중간하게 할줄 아는 외국인 입장에서는 '오우, 검열? Such a novel word for me'하고 쓸 수도 있다.
+      * 그 누구도 교수님께 '교수님 검열 부탁드립니다'하고 논문을 보내지 않지 않는가? 하지만 한글을 어중간하게 할줄 아는 외국인 입장에서는 '오우, 검열? Such a novel word for me'하고 쓸 수도 있다. 그러면 안 된다.
       * 이처럼 언어 마다 각 단어가 지니는 늬앙스가 존재하기 때문에, 이를 잘 살펴봐야 함(특히 우리같은 non-English spoken world의 연구자라면 더더욱...). 
-* 영어에서 약어는 simultaneous localization and mapping (SLAM)과 같이 쓰면 소문자로 쓰면 됨
-    *  simultaneous localization and mapping (SLAM)
+* 영어에서 약어는 simultaneous localization and mapping (SLAM)과 같이 소문자로 쓰면 됨. 대문자로 쓰는게 오히려 어색하다.
+    *  simultaneous localization and mapping (SLAM) (o)
+    *  Simultaneous Localization And Mapping (SLAM) (x)
+    * 신기한 점은, 오히려 한글 저널/국내 논문에서는 SLAM(Simultaneous Localization And Mapping)와 같이 약어를 먼저 제시하고 full term을 풀어서 작성함 + 괄호와 약어 간 space 없음.
 * ChatGPT가 'ensure', 'faciliate'와 같은 단어를 추천해주는데, 이와 같은 단어보다 좀 더 구체적인 단어를 쓰길
-  * 도대체 ensure consistency, ensure robustness가 무슨 뜻임?
+  * 도대체 ensure consistency, ensure robustness가 무슨 뜻임? 이런 vague phrasing을 쓰면 독자 입장에서 무슨 말을 하고자 하는지 정확하게 이해가 안되기 때문에, 이를 지양해야 함/
   * (영) *ensure: to make (something) sure, certain, or safe*
     * 즉, 어떤 입력의 크기를 N개로 fix하는 등, 100이면 100 다 합당한 상황에서만 ensure을 쓰고, 그 이외에는 maintain consistency나 enhance robustness와 같이 독자가 직관적으로 이해할 수 있는 단어를 사용할 것
 * 논문에서 'outperform'이라는 단어를 **절대로** 사용하지 말자
-    * 꽤나 무례한 표현일지도,,,? 80%의 확률로 baseline approaches의 저자가 당신의 논문의 reviewer일 가능성이 높음
+    * 꽤나 무례한 표현일지도,,,? 참고로, 높은 확률로 Editor들은 baseline approaches의 저자에게 우선적으로 review invitation을 보냄. 따라서 당신이 디스하고자 하는 논문의 저자가 당신의 논문의 reviewer일 가능성이 높음!
        * 근데 baseline approaches를 글에서 과도하게 난도질해버린다면? 
     * 'showed lower error'나 'showed higher success rate', 'showed a substantial increase in performance'와 같이 완곡한 표현을 쓸 것. 
 * 'significant'나 'significantly'는 t-test 이후 통계적으로 유의미하다고 검증이 되었을 때만 쓸 수 있음
-    * 'substantially'을 활용하자
+    * 'substantially'을 활용하자, e.g., our approach showed substantial performance increase.
 * 한국에서는 특히 passive voice로 글을 써라고 많이들 가르치는데, 'we'를 써도 괜찮다.
     * 논문은 주장글이기 때문! 다만 methodology 부분에서는 너무 많이 쓰지 말 것
 * 위인 이름은 첫 글자 대문자로!
@@ -80,13 +82,15 @@
 * Eigenvector와 eigenvalue는 no space로 붙여 써야 함
 * Keypoint도 key point라고 쓰는 거 보다 붙여 쓰는 게 맞음
 * 영어에서는 1~5와 같이 범위를 나타낼 때는 1-5로 나타냄. ~는 approximated의 의미로 사용됨.
+  * 그리고 LaTex 상에서는 --로, 두 개를 써야 from A to B의 의미인 대쉬가 생김.
 * Hyphen(-)을 남용하지 말자. 부사 + 형용사에는 굳이 -을 쓸 필요 없음. 명사 + 형용사의 경우에만 -를 사용한다.
   * e.g. tightly-coupled (x), tightly coupled (o), outlier-robust (o)    
 * 뭐시기-based로 쓸 때는 꼭 hyphen을 넣어야 함
    * ResNet based approach (x), ResNet-based approach (o)
       * 위의 명사 + 형용사의 케이스와 같음  
-* 부사를 사용할 때는 동사 앞에 배치하는 게 더 clear함 (근데 Grammarly는 제일 뒤에 배치하라고 함 주의. Grammarly를 따르지 말자)
+* 부사를 사용할 때는 동사 앞에 배치하는 게 더 clear함 (근데 Grammarly는 제일 뒤에 배치하라고 함 주의. 이 부분에 대해서는 Grammarly를 따르지 말자)
   * e.g., enhanced [...] effectively (x), effectively enhanced (o)
+  * 왜냐하면 가장 뒤에 두면 문장 전체를 수식하게 되어서 어디를 가리키게 되는지 모호해지기 때문
 
 
 ### 영어 공부할 때 읽어보면 좋은 글/논문들 (To 나의 미래 대학원생들에게)
