@@ -127,6 +127,11 @@
         * 정신 차리고 쓰면 된다고? 다 내가 아래와 같이 휴먼 에러를 영구히 박제당한 경험으로 피토하며 얻은 교훈이니 꼭 좀 따라 주길...
             * 아래는 `i`라고 쓰다가 `k`라고 쓰는 게 더 좋을 거 같다고 생각해 바꾸다가 미처 발견하지 못한 typo; see (6).
             *  [논문](https://arxiv.org/pdf/2203.06612)에 Typo 내면 꽤나 부끄럽다... 🥲🥲🥲
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/7f235091-1509-4adb-94a0-e5f549afb43f" width="70%">
+</div>
+
    * **실수 예시 1.** 논문을 처음 쓰면 다른 형태의 문자 != 다른 변수라는 개념이 잘 잡혀있지 않아서 아래와 같이 `k`를 다른 표기로 하는 등의 실수를 빈번히 함. 
         * Sol) `k`를 `\newcommand{\timestep}{k}`와 표현해서 싸용하면 휴먼 에러를 줄일 수 있음
    
@@ -138,9 +143,6 @@
 ![image](https://github.com/user-attachments/assets/82d0efb7-43e7-42f4-a749-042661959426)
 
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/7f235091-1509-4adb-94a0-e5f549afb43f" width="70%">
-</div>
     * 아래는 현재 내가 실제 논문 쓸 때의 예시(KISS-Matcher의 Section III.A 첫 부분):
    
 ```
