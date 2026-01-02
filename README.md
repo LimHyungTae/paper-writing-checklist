@@ -69,6 +69,7 @@
   * 도대체 ensure consistency, ensure robustness가 무슨 뜻임? 이런 vague phrasing을 쓰면 독자 입장에서 무슨 말을 하고자 하는지 정확하게 이해가 안되기 때문에, 이를 지양해야 함/
   * (영) *ensure: to make (something) sure, certain, or safe*
     * 즉, 어떤 입력의 크기를 N개로 fix하는 등, 100이면 100 다 합당한 상황에서만 ensure을 쓰고, 그 이외에는 maintain consistency나 enhance robustness와 같이 독자가 직관적으로 이해할 수 있는 단어를 사용할 것
+* ChatGPT의 글을 긁어서 논문에 붙이는 경우 따옴표를 잘 확인하자. Latex에서 따옴표는`(esc 바로  아래 key)와 '로 씀. 즉, word처럼 ' '로 쓰는 게 아님!
 * 논문에서 'outperform'이라는 단어를 **절대로** 사용하지 말자
     * 꽤나 무례한 표현일지도,,,? 참고로, 높은 확률로 Editor들은 baseline approaches의 저자에게 우선적으로 review invitation을 보냄. 따라서 당신이 디스하고자 하는 논문의 저자가 당신의 논문의 reviewer일 가능성이 높음!
        * 근데 baseline approaches를 글에서 과도하게 난도질해버린다면? 
@@ -214,6 +215,7 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
       * e.g., `20\,m`와 같이
   * 숫자와 %는 no space로 붙여 써야 함 
       * e.g., 10%, 20%와 같이
+* 범위는 `--` 2개를 써야 함! (e.g., 10-30% (x), 10--30% (o))
 * (나의 취향) 논문에서 쓰는 parameter가 유저가 정해주는 값이라면 'user-defined'를 꼭 붙이자.
    * 해당 변수가 어떤 알고리즘으로부터 기인하는 건지, 외부의 유저로부터 오는 건지 명확하게 밝히기 위해.      
   
