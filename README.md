@@ -92,6 +92,26 @@
 * 부사를 사용할 때는 동사 앞에 배치하는 게 더 clear함 (근데 Grammarly는 제일 뒤에 배치하라고 함 주의. 이 부분에 대해서는 Grammarly를 따르지 말자)
   * e.g., enhanced [...] effectively (x), effectively enhanced (o)
   * 왜냐하면 가장 뒤에 두면 문장 전체를 수식하게 되어서 어디를 가리키게 되는지 모호해지기 때문
+* Oxford comma를 반드시 사용하자. 3개 이상을 나열할 때, 마지막 항목 앞의 and/or 전에 쉼표를 찍어야 함
+  * size, weight and orientation (x) → size, weight, and orientation (o)
+  * 이게 없으면 마지막 두 항목이 하나의 묶음인지 모호해지는 경우가 생김
+* Em dash(`—`)를 논문에서 쓰지 말 것. AI가 생성한 글의 대표적 신호로 여겨짐
+  * "Our method — which is fast — achieves..." (x) → "Our method, which is fast, achieves..." (o)
+  * 쉼표, 세미콜론, 콜론으로 대체하거나 문장을 재구성할 것
+* `et al.` 뒤의 동사는 반드시 **복수형**이어야 함. "et al."은 "and others"의 뜻이기 때문
+  * Lim et al. proposes (x) → Lim et al. propose (o)
+* Tense(시제) 일관성을 유지할 것
+  * **Present tense**: 본 논문의 contribution, 기정사실화된 내용 ("We propose...", "The method achieves...")
+  * **Past tense**: 실험 과정 설명 ("We evaluated...", "We trained...")
+  * **Related Work**: present tense가 원칙 ("X et al. propose...")이나, section 내에서 일관되게 past tense를 쓰는 것도 허용. 단, 한 section 내에서 **섞어 쓰면 안 됨**
+* 불필요한 filler expression을 줄이자
+  * "In order to" → "To" (동일한 의미인데 더 짧음)
+  * "due to the fact that" → "because"
+  * "It is worth noting that" → 바로 "Note that"
+* 동사의 명사화(nominalization)를 피하자. 동사를 명사형으로 바꾸면 문장이 길어지고 약해짐
+  * "The estimation of the pose is performed by our method." (x) → "Our method estimates the pose." (o)
+  * "The implementation of the algorithm is done using C++." (x) → "We implement the algorithm in C++." (o)
+  * estimation, implementation, utilization, computation 등의 명사가 보이면 직접적인 동사로 바꿀 수 있는지 검토할 것
 
 
 ### 영어 공부할 때 읽어보면 좋은 글/논문들 (To 나의 미래 대학원생들에게)
@@ -167,7 +187,20 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
    * 위와 같이 써두면 final proofreading 단계에서 논문 내의 모든 동일한 변수를 손쉽게, 실수 없이 바꿀 수 있으니, **휴먼 에러를 방지할 수 있다!**
    * 이러한 관점에서 Overleaf 쓰지 말라고 한것임...Overleaf에는 file navigation system이 없어서 파일 내/파일-to-파일 간 왔다갔다 하는게 필연적으로 비효율적이다 :(
        * 그러니 다들 Microsoft word에서 글 쓰듯이 주저리주저리 써버리게 됨 ㅠ
-       * 요즘은 vscode나 [Pycharm](https://limhyungtae.github.io/2023-12-15-Overleaf,-TexStudio-%EB%A7%90%EA%B3%A0-Pycharm%EC%9D%98-Texify%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-LaTex-%EC%9E%91%EC%84%B1/)에서도 Latex compile이 가능하다. 가능한 자신이 원래 쓰던 IDE에서 Latex 작업도 했으면...    
+       * 요즘은 vscode나 [Pycharm](https://limhyungtae.github.io/2023-12-15-Overleaf,-TexStudio-%EB%A7%90%EA%B3%A0-Pycharm%EC%9D%98-Texify%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%B8-LaTex-%EC%9E%91%EC%84%B1/)에서도 Latex compile이 가능하다. 가능한 자신이 원래 쓰던 IDE에서 Latex 작업도 했으면...
+   * 변수뿐 아니라 method name, dataset name 등 반복 사용되는 고유명사도 `\newcommand`로 관리하면 일관성을 유지하기 쉬움. 또한 `\xspace`를 함께 쓰면 뒤에 space를 수동으로 관리할 필요가 없어짐
+```
+\usepackage{xspace}
+\newcommand{\methodname}{KISS-Matcher\xspace}  % \methodname is ... (o) 
+```
+   * **TIP**: `\ie`, `\eg`, `\etal` 같은 약어 매크로를 미리 정의해두면 편하고, italic이나 comma 실수도 방지할 수 있음
+```
+\newcommand{\ie}{\textit{i.e.},\xspace}
+\newcommand{\eg}{\textit{e.g.},\xspace}
+\newcommand{\etal}{\textit{et al.}\xspace}
+\newcommand{\etalcite}[2]{#1~\etal\cite{#2}}
+% 사용 예: \etalcite{Lim}{lim2023erasor2} → "Lim et al. [7]"
+```
 
 * **중요3**: Latex에 생각보다 자동화할 수 있는 유용한 packages가 많으니, 잘 활용하자
 - `\usepackage{cite}`: 아래와 같이 citation을 간략하게 써주고, 순서도 알아서 적절히 수정해주는 역할을 함 
@@ -175,8 +208,27 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
    - Orders them automatically even if you write \cite{ref43,ref41,ref42} → [41–43]
    - 참고: `natbib`와 동시에 사용하면 충돌이 날 수도 있음
 - `\usepackage{cleveref}`: 번거롭게 `Fig.~\ref{fig:fig1}`와 같이 안 써도 되고 `\Cref{fig:fig1}`와 같이 간략하게 표현하면, Table이든 Fig든 알아서 pointing해 줌. 아래와 같이 추가적인 명령어들로 각 요소를 어떻게 refer할지도 세팅할 수 있음. 근데 선언할 때 `\usepackage{hyperref}`를 선언한 후에 선언해 줘야 함. 아래는 포매팅을 바꾸는 예시
+   - 여러 개를 한꺼번에 refer할 때: `\Cref{fig:xx,fig:xy}` → "Figs. 1 and 2"와 같이 자동으로 처리해줌
+- `\usepackage{booktabs}`: Table에서 `\hline` 대신 `\toprule`, `\midrule`, `\bottomrule`을 사용하면 훨씬 깔끔한 표를 만들 수 있음. 전문적인 논문에서는 세로줄(`|`)도 쓰지 않는 것이 관례
 
-* 모든 figures, tables, algorithm은 top이나 bottom에 붙여야 하는 것이 원칙임. Manuscript 중간에 글이나 그림이 있으면 안됨 
+* **중요4**: Package load order에 주의하자. 순서가 틀리면 충돌이 나거나 의도하지 않은 동작이 발생함
+  * `hyperref` → `cleveref` 순서 (위에서 언급)
+  * `amsmath` → `mathtools` 순서 (`mathtools`가 `amsmath`를 확장하는 패키지이므로)
+  * `xcolor` → `tikz` 순서
+  * `caption` → `subcaption` 순서
+  * `subfig`와 `subcaption`은 **동시에 사용하면 충돌**남. 둘 중 하나만 사용할 것
+
+* **중요5**: Label naming convention을 일관되게 사용할 것
+  * `fig:`, `tab:`, `eq:`, `sec:`, `alg:`, `app:` 등의 prefix를 붙이는 것이 관례
+  * e.g., `\label{fig:overview}`, `\label{tab:comparison}`, `\label{eq:loss}`
+  * 이렇게 해야 `\Cref`이 올바르게 "Fig.", "Table", "Sec." 등을 자동으로 붙여줌
+
+* **중요6**: `\cite{}` 앞에는 **반드시 non-breaking space(`~`)**를 넣을 것
+  * `methods~\cite{ref1}` (o) / `methods \cite{ref1}` (x)
+  * Non-breaking space가 없으면 citation 번호가 다음 줄로 넘어가서 어색해질 수 있음
+  * 같은 이유로 `\ref{}`, `\Cref{}` 앞에도 `~`를 사용하는 것이 좋음 (단, `\Cref`은 문장 시작에 쓸 때는 불필요)
+
+* 모든 figures, tables, algorithm은 top이나 bottom에 붙여야 하는 것이 원칙임. Manuscript 중간에 글이나 그림이 있으면 안됨
     * i.e., `\begin{figure}[t!]`, `\begin{table}[t!]`, `\begin{algorithm}[t!]`과 같이 `[t!]`(top에 강제(!)로 place)을 붙여줘야 함
 ```
 \renewcommand{\figurename}{Fig.} % 'Figure' to 'Fig.'
@@ -206,6 +258,13 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
 **NOTE:** 저 점(.)의 의미는 약어임을 나타내는 용도이기 때문에, Table의 경우 뒤에 .이 오면 안 된다. 논문을 처음 쓰는 후배들이 빈번히 실수하는 부분.
 - 예시: Table 1 (o), Table. 1 (x)
 
+* `\label`은 반드시 `\caption` **뒤에**(혹은 안에) 배치해야 함. `\caption` 전에 `\label`을 넣으면 잘못된 번호가 참조됨
+```
+% 올바른 순서
+\caption{Overview of our method.}
+\label{fig:overview}
+```
+
 ---
 
 ## Misc
@@ -219,14 +278,31 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
       * e.g., 10%, 20%와 같이
 * 범위는 `--` 2개를 써야 함! (e.g., 10-30% (x), 10--30% (o))
 * (나의 취향) 논문에서 쓰는 parameter가 유저가 정해주는 값이라면 'user-defined'를 꼭 붙이자.
-   * 해당 변수가 어떤 알고리즘으로부터 기인하는 건지, 외부의 유저로부터 오는 건지 명확하게 밝히기 위해.      
-  
+   * 해당 변수가 어떤 알고리즘으로부터 기인하는 건지, 외부의 유저로부터 오는 건지 명확하게 밝히기 위해.
+* 큰 숫자에는 천 단위 구분 쉼표를 사용할 것
+  * 10000 (x) → 10,000 (o)
+  * Latex에서는 `\num{10000}`(`siunitx` 패키지) 또는 `10{,}000`으로 쓸 수 있음
+* **제출 전 반드시 `TODO`, `FIXME`, `XXX`, `TBD` 등의 placeholder가 남아있지 않은지 확인**할 것
+  * Latex 파일 전체에서 검색: `grep -rn "TODO\|FIXME\|XXX\|TBD" *.tex`
+  * 이런 게 남아있는 채로 제출하면 매우 민망함...
+
 ---
 
 # Figures \& Tables
 
 * 숫자가 있다면 단위가 잘 기입되었는지 반드시 확인하자.
     * 숫자 자체가 중요한 게 아니라 '무엇의' 숫자인지를 명시적으로 나타내는 게 훨씬 중요하다는 것을 잊지 말자.
+* **Caption은 self-contained**해야 함. 본문을 읽지 않고 caption만 봐도 figure/table이 무엇을 보여주는지 이해할 수 있어야 함
+  * Caption 내에서 약어를 사용한다면, 해당 약어의 full form을 caption 안에서도 명시하거나 이미 널리 알려진 약어만 사용할 것
+  * Table에서 baseline과 비교하는 경우, baseline 논문의 citation을 caption에도 넣어주는 것이 좋음
+* Table에서 **bold/underline** convention을 사용할 경우, caption에 명시할 것
+  * e.g., "The best results are **bolded** and the second-best are <u>underlined</u>."
+* 본문에서 Figure와 Table을 참조할 때는 **등장 순서대로** (ascending order) 참조해야 함
+  * 본문에 Fig. 3이 Fig. 2보다 먼저 나오면 안 됨. 순서가 맞지 않으면 figure/table 배치를 재조정할 것
+* 본문에서 언급하는 수치와 Table의 수치가 **정확히 일치**하는지 반드시 cross-check할 것
+  * 본문에 "our method achieves 95.3%"라고 쓰고 Table에는 95.2%가 적혀 있으면 reviewer가 신뢰를 잃게 됨
+* Figure 내 텍스트의 font size가 본문과 너무 동떨어지면 안 됨
+  * Figure 내 글자가 너무 작아서 확대해야 읽히거나, 반대로 너무 크면 이질감이 들어서 보기 좋지 않음
 
 ---
 
@@ -240,6 +316,7 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
    * Abstract는 manuscript와 완전히 독립된, 하나의 paragraph임
       * 본문에 약어를 full로 썼더라도 abstract에서는 다시 해당 약어를 풀어서 써야 함.
       * Abstract에서 문단 나누지 말 것
+      * Abstract에서는 **citation(`\cite{}`)을 사용하지 않는** 것이 원칙. Abstract는 독립적으로 읽히는 글이기 때문에 reference 번호가 의미 없음
 * 내용 관련
    * Abstract에서는 아래와 같은 구조로 논문을 적자 (근데 지도 교수님의 writing 스타일에 따라 'Why'를 생략하고 바로 'In this paper, -'로 시작하는 걸 선호하는 교수님도 계시므로, 연구실에서 이전에 제출했던 글의 flow를 꼭 한번 체크하자.)
       * **WHY?**: 1~2문장으로 연구의 중요성을 명확하게 설명할 것. 이 연구가 왜 중요한가? 왜 독자가 관심을 가져야 하는가?
@@ -307,6 +384,9 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
 
 * 논문의 결과를 단순히 표(Table)로만 제시하는 것보다, 다양한 형태의 표현(e.g., 그래프, 시각적 비교, 도식화)을 활용하는 것이 중요
    * 표는 N > 5인 baseline들과 비교할 때 수치를 명확하게 전달하는 데 유용하지만, 직관적인 이해를 돕는 건 graph가 더 효과적
+* 각 실험(Table/Figure)의 **목적**을 본문에서 명확히 밝힐 것. 단순히 "Table II shows the results"가 아니라, 이 실험을 **왜** 했는지, **무엇을** 보여주고자 하는지를 먼저 설명해야 함
+  * e.g., "To validate the robustness of our method under noisy conditions, we evaluate on..."
+* Ablation study에서 각 component를 제거/변경했을 때의 결과를 보여줄 때, **methodology section의 어느 부분에 해당하는지**도 명시적으로 연결해 주면 독자가 이해하기 쉬움
 
 ## Conclusion
 
