@@ -74,6 +74,9 @@
     * 꽤나 무례한 표현일지도,,,? 참고로, 높은 확률로 Editor들은 baseline approaches의 저자에게 우선적으로 review invitation을 보냄. 따라서 당신이 디스하고자 하는 논문의 저자가 당신의 논문의 reviewer일 가능성이 높음!
        * 근데 baseline approaches를 글에서 과도하게 난도질해버린다면? 
     * 'showed lower error'나 'showed higher success rate', 'showed a substantial increase in performance'와 같이 완곡한 표현을 쓸 것. 
+* 같은 맥락에서, **"all", "every", "always" 같은 단정적인 단어가 들어간 overclaim**도 피할 것
+    * (x) "Our method outperforms **all** existing methods", "achieves the best performance in **every** metric"
+    * 결과가 universally 우월한 게 아니라면 (즉, 모든 dataset/sequence/metric에서 다 1등이 아니라면), "achieves promising performance" 또는 "shows favorable results compared to state-of-the-art methods"와 같이 완곡하게 쓸 것
 * 'significant'나 'significantly'는 t-test 이후 통계적으로 유의미하다고 검증이 되었을 때만 쓸 수 있음
     * 'substantially'을 활용하자, e.g., our approach showed substantial performance increase.
 * 한국에서는 특히 passive voice로 글을 써라고 많이들 가르치는데, 'we'를 써도 괜찮다.
@@ -207,8 +210,12 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
    - Compresses numerical citations: \cite{ref41,ref42,ref43,ref44,ref45,ref46} → [41–46]
    - Orders them automatically even if you write \cite{ref43,ref41,ref42} → [41–43]
    - 참고: `natbib`와 동시에 사용하면 충돌이 날 수도 있음
-- `\usepackage{cleveref}`: 번거롭게 `Fig.~\ref{fig:fig1}`와 같이 안 써도 되고 `\Cref{fig:fig1}`와 같이 간략하게 표현하면, Table이든 Fig든 알아서 pointing해 줌. 아래와 같이 추가적인 명령어들로 각 요소를 어떻게 refer할지도 세팅할 수 있음. 근데 선언할 때 `\usepackage{hyperref}`를 선언한 후에 선언해 줘야 함. 아래는 포매팅을 바꾸는 예시
+- `\usepackage[nameinlink]{cleveref}`: 번거롭게 `Fig.~\ref{fig:fig1}`와 같이 안 써도 되고 `\Cref{fig:fig1}`와 같이 간략하게 표현하면, Table이든 Fig든 알아서 pointing해 줌. 아래와 같이 추가적인 명령어들로 각 요소를 어떻게 refer할지도 세팅할 수 있음. 근데 선언할 때 `\usepackage{hyperref}`를 선언한 후에 선언해 줘야 함. 아래는 포매팅을 바꾸는 예시
+   - **반드시 대문자 `\Cref`을 사용할 것. 소문자 `\cref`는 쓰지 말 것** (capitalize 같은 부가 옵션을 추가로 신경 써야 해서 복잡해질 뿐 이득이 없음)
+   - **`\ref` + prefix 수동 조합은 human error의 온상**. 첨삭하다 보면 `Table~\ref{table:foo}`라고 적어야 하는데 `Fig.~\ref{table:foo}` (prefix만 Fig.로 잘못 씀), 혹은 그 반대인 경우가 왕왕 발견됨. `\Cref{}`을 쓰면 cleveref가 label만 보고 prefix를 자동으로 붙여 주기 때문에 이런 실수가 원천 차단됨
    - 여러 개를 한꺼번에 refer할 때: `\Cref{fig:xx,fig:xy}` → "Figs. 1 and 2"와 같이 자동으로 처리해줌
+   - **`nameinlink` 옵션 권장**: 기본 옵션으로 cleveref를 쓰면 "Fig. 3"에서 숫자 부분만 hyperlink가 걸리는데, `nameinlink`를 주면 "Fig. 3" 전체(prefix + 숫자)가 hyperlink가 되어 클릭이 쉬워짐
+   - **"Section." (x) → "Sec." (o)**: 약어 표기를 일관되게 쓸 것. `\Crefname{section}{Sec.}{Secs.}`로 강제할 수 있음. 단, 문장 시작에서는 "Section 3"으로 풀어 쓰는 venue도 있으니 가이드 체크할 것
 - `\usepackage{booktabs}`: Table에서 `\hline` 대신 `\toprule`, `\midrule`, `\bottomrule`을 사용하면 훨씬 깔끔한 표를 만들 수 있음. 전문적인 논문에서는 세로줄(`|`)도 쓰지 않는 것이 관례
 
 * **중요4**: Package load order에 주의하자. 순서가 틀리면 충돌이 나거나 의도하지 않은 동작이 발생함
@@ -284,7 +291,7 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
   * Latex에서는 `\num{10000}`(`siunitx` 패키지) 또는 `10{,}000`으로 쓸 수 있음
 * **제출 전 반드시 `TODO`, `FIXME`, `XXX`, `TBD` 등의 placeholder가 남아있지 않은지 확인**할 것
   * Latex 파일 전체에서 검색: `grep -rn "TODO\|FIXME\|XXX\|TBD" *.tex`
-  * 이런 게 남아있는 채로 제출하면 매우 민망함...
+  * 이런 게 남아 있는 채로 리뷰어에게 넘어간다? 바로 리젝임(필자도 이런 미완성된 manuscript를 여러 번 받아봤음)
 
 ---
 
@@ -295,6 +302,18 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
 * **Caption은 self-contained**해야 함. 본문을 읽지 않고 caption만 봐도 figure/table이 무엇을 보여주는지 이해할 수 있어야 함
   * Caption 내에서 약어를 사용한다면, 해당 약어의 full form을 caption 안에서도 명시하거나 이미 널리 알려진 약어만 사용할 것
   * Table에서 baseline과 비교하는 경우, baseline 논문의 citation을 caption에도 넣어주는 것이 좋음
+* **Caption은 observation을 기술하고, conclusion을 미리 적지 말 것**
+  * (x) "Our method works better than baselines."
+  * (o) "Our method shows lower trajectory error than the baselines on KITTI 00."
+* **Caption의 첫 문장은 명사구로 작성**할 것 (개조식 스타일, 마침표로 종결)
+  * 한국어 제안서에서 *"~에 대한 개략도. (a) AA를 나타냄. (b) BB하는 과정을 시각화함."*처럼 첫 줄을 명사구로 시작하는 convention과 동일
+  * (o) "Overview of our pipeline." / "Comparison of trajectory errors on KITTI 07."
+  * (x) "This figure shows the overview of our pipeline." ← 완전 문장으로 시작하지 말 것. "Overview of..."로 충분하고 redundant함
+* **Caption의 모든 문장은 마침표(`.`)로 끝낼 것**. 첫 명사구도 마침표 필수
+  * 뒤이어 설명 문장을 적을 때 "...able to handle outliers"처럼 동사구로 매달려 끊지 말고, 완전한 절 + 마침표로 마무리
+* **Subcaption (a), (b) 등을 문장의 주어로 쓰지 말 것**
+  * (x) "(a) shows the input image, and (b) shows the output."
+  * (o) "(a) An input image and (b) the corresponding output." 또는 명사구로 "(a) Input image. (b) Output image."
 * Table에서 **bold/underline** convention을 사용할 경우, caption에 명시할 것
   * e.g., "The best results are **bolded** and the second-best are <u>underlined</u>."
 * 본문에서 Figure와 Table을 참조할 때는 **등장 순서대로** (ascending order) 참조해야 함
@@ -379,6 +398,24 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
      * e.g., "KISS-MATCHER: ROBUST, FAST, AND SCALABLE OUTLIER-ROBUST REGISTRATION"     
 * 반드시 독자에게 개요를 제공하고, 구체적인 방법을 설명할 것.
 * 논문은 독자가 이해할 수 있도록 작성해야 하는 글이다. 먼저 숲을 보여준 뒤 나무를 설명하는 것과, 바로 숲속에 던져버린 채 나무만 깊이 설명하는 것을 비교했을 때, 전자가 훨씬 더 이해하기 쉽다.
+* **Module 정의에서 circular description 금지**: module이나 component를 단순히 그 이름을 풀어 써서 정의하지 말 것
+   * (x) "The Feature Aggregation Module aggregates features..."는 동어반복으로, 독자에게 정보가 0
+   * (o) 어떤 input을 받아 어떤 transformation을 거쳐 어떤 output을 내는지를 명시할 것
+       * e.g., "The Feature Aggregation Module takes per-point local features and produces a global descriptor by applying max-pooling followed by an MLP."
+* **Motivation → design choice → result의 인과를 명확히 연결**할 것
+   * Motivation을 적었으면 그 motivation이 design choice로 어떻게 이어지는지 반드시 명시
+       * e.g., "Outliers are common in real-world LiDAR scans." (motivation) → "*Therefore*, we adopt a robust kernel that suppresses the influence of outliers." (design choice) → "..., *resulting in robust performance under heavily outlier-contaminated scenes*." (result in experimental results section)
+   * 결과를 진술할 때 다음 세 가지를 동시에 지킬 것:
+       * **본문에는 숫자를 단순 나열하지 말고, 결과에 대한 분석/해석을 적을 것**
+           * 구체적인 metric 값들은 어차피 Table/Figure에 다 적혀 있음. 본문에서 같은 숫자를 또 줄줄이 적으면 reviewer 입장에서는 동일한 내용을 계속 반복해서 읽게 되어 지루함
+           * 대신 왜 그런 결과가 나왔는지(어떤 design choice가 어떤 시나리오에서 효과적이었는지, 어떤 trend가 보이는지)를 **해석**해 줄 것
+           * (x) "Our method achieved 0.X m RMSE on KITTI 00, 0.Y m on KITTI 02, and ..."  ← Table을 보면 됨
+           * (o) "Our method maintained low trajectory error even in dynamic scenes (e.g., KITTI 07), suggesting that the proposed outlier rejection is effective under non-stationary environments."
+       * **유순한 표현을 쓸 것** (e.g., "showed a substantial performance increase"). 단정적인 표현은 reviewer를 자극함
+       * **모든 경우에 이긴 게 아니라면 반드시 예외를 명시**할 것
+           * 많은 이들이 실수하는 부분이다. 예를 들어 10개 sequence 중 8개를 이기고 2개를 졌다면, 그냥 "showed better performance"라고 뭉뚱그리지 말 것
+           * 그렇게 적으면 reviewer가 *"나머지 2개에서는 더 안 좋은데 어떻게 better라고 말할 수 있냐"* 하고 딴지 걸 수 있음
+           * (o) "Our method achieved lower RMSE on 8 out of 10 sequences, while showing comparable performance on the remaining two."
 
 ## Experiment results
 
@@ -407,3 +444,13 @@ LaTeX 문서에서 Acknowledgments’(감사의 말) 섹션을 작성할 때는 
 % e.g.
 \section*{Acknowledgments}
 ```
+
+---
+
+# Related Repositories
+
+논문 작성을 도와주는 관련 레포지토리들. 함께 보면 시너지가 큼.
+
+* **[paper_quality_plot.matlab](https://github.com/LimHyungTae/paper_quality_plot.matlab)**: MATLAB 기반의 논문 figure 생성 스크립트 모음. 학회/저널 발표용 plot의 visual quality를 일관되게 유지하도록 도와줌.
+* **[paper-quality-stat-plots](https://github.com/LimHyungTae/paper-quality-stat-plots)**: 논문에 들어갈 statistical plot을 깔끔하게 그리기 위한 Python 기반 tool.
+* **[awesome-claudecode-paper-proofreading](https://github.com/LimHyungTae/awesome-claudecode-paper-proofreading)**: Claude Code 기반의 논문 proofreading prompt 모음. 위에서 언급한 ChatGPT proofreading의 더 정교화된 워크플로우.
