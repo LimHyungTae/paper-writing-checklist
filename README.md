@@ -216,7 +216,13 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
    - 여러 개를 한꺼번에 refer할 때: `\Cref{fig:xx,fig:xy}` → "Figs. 1 and 2"와 같이 자동으로 처리해줌
    - **`nameinlink` 옵션 권장**: 기본 옵션으로 cleveref를 쓰면 "Fig. 3"에서 숫자 부분만 hyperlink가 걸리는데, `nameinlink`를 주면 "Fig. 3" 전체(prefix + 숫자)가 hyperlink가 되어 클릭이 쉬워짐
    - **"Section." (x) → "Sec." (o)**: 약어 표기를 일관되게 쓸 것. `\Crefname{section}{Sec.}{Secs.}`로 강제할 수 있음. 단, 문장 시작에서는 "Section 3"으로 풀어 쓰는 venue도 있으니 가이드 체크할 것
-- `\usepackage{booktabs}`: Table에서 `\hline` 대신 `\toprule`, `\midrule`, `\bottomrule`을 사용하면 훨씬 깔끔한 표를 만들 수 있음. 전문적인 논문에서는 세로줄(`|`)도 쓰지 않는 것이 관례
+- `\usepackage{booktabs}`: Table에서 `\hline`(또는 `\hline\hline`) 대신 `\toprule`, `\midrule`, `\bottomrule`을 사용할 것. 부분 라인용 `\cmidrule{a-b}`도 제공됨
+   - **시각적 차이**
+      - `\hline`은 모든 줄이 동일한 얇은 선. 반면, `\toprule`/`\bottomrule`은 더 두껍고(기본 0.08em), `\midrule`은 중간 굵기(0.05em)라 header/body의 위계가 자연스럽게 생김
+      - booktabs는 선 위아래에 적절한 수직 여백(`\abovetopsep`, `\belowbottomsep` 등)을 자동으로 넣어 줌. `\hline`은 여백이 빡빡해서 글자가 선에 붙는 느낌이 남
+   - **의미론적 차이**
+      - `\toprule`/`\midrule`/`\bottomrule`은 "표의 어느 위치 선인지"가 이름에 드러남. Header와 body 구분, 표의 시작/끝이 명확해짐
+      - `\hline`은 그냥 "선 하나". 같은 선을 아무 데나 쓰게 되어 표가 격자처럼 무거워지기 쉬움
 
 * **중요4**: Package load order에 주의하자. 순서가 틀리면 충돌이 나거나 의도하지 않은 동작이 발생함
   * `hyperref` → `cleveref` 순서 (위에서 언급)
