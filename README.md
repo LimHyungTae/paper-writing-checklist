@@ -1,13 +1,19 @@
-# Latex Writing Checklists 
+<div align="center">
+
+<h1>Latex Writing Checklists</h1>
+
+<p><strong><em>철저히 나의 취향이 반영된 writing 체크리스트.</em></strong></p>
+
+</div>
 
 이 글은 향후 내가 임용된 후 대학원생들의 논문을 검토할 때, 같은 말을 각 학생에게 반복해서 설명하는 행위를 그나마 덜 하기 위해 작성하게 되었다. 시간이 날 때마다 지금까지 배워온 writing 관련 내용을 정리하여 하나씩 추가해 갈 예정이다.
 
 이는 철저히 **나의 취향이 반영된 writing 체크리스트**이다. 사실, 일부 항목은 right/wrong(반드시 따라야 할 것)이고, 일부는 better/worse(따르면 좋은 것)의 영역이지만, 아는 만큼 보인다고 하지 않는가. 
 논문을 쓰기 전에 한 번 읽고, 교수님께 논문 드리기 전에 한 번 읽고 스스로 다시 찬찬히 살펴본 후 교수님께 v1 논문을 드리면 🎓✨당신도 할 수 있다! @박사 3년 졸업★ ✨🎓 ~(아님 말고)~
 
----
+______________________________________________________________________
 
-# 논문을 쓸 때의 마음가짐
+## :thinking: 논문을 쓸 때의 마음가짐
 
 1. 논문은 절대로, 학부과정 때까지의 시험을 100점 맞는 것처럼 **'만점'의 상태가 될 수 없다**.  
     * Accept을 노린다는 마인드가 아니라, reject의 complement를 노린다는 마인드를 장착해야 한다.
@@ -45,9 +51,9 @@
       * 일반적으로, 그 이유가 합리적이면 대부분 받아들여 주심
          * 하지만, 높은 확률로 이는 학생의 경험 부족에서 비롯된 것이며, 실제로는 교수님의 조언이 더 적절한 경우가 많(았)다(100% 나의 대학원 시절 경험에 기반한 주관적인 의견)
 
----
+______________________________________________________________________
 
-## 당장 도움되는 English Writing Tips
+## :speech_balloon: 당장 도움되는 English Writing Tips
 
 * 논문 쓰는 것 자체가 처음이라면? 사실 영어 writing이 중요한 게 아니라, '논문'이라는 것의 이해도를 먼저 높이는 게 중요함
    * [한글로 설명된 이 글](https://brunch.co.kr/@85a651d484d84f2/2)을 한 번 읽어보는 것을 추천.
@@ -117,7 +123,7 @@
   * estimation, implementation, utilization, computation 등의 명사가 보이면 직접적인 동사로 바꿀 수 있는지 검토할 것
 
 
-### 영어 공부할 때 읽어보면 좋은 글/논문들 (To 나의 미래 대학원생들에게)
+## :books: 영어 공부할 때 읽어보면 좋은 글/논문들 (To 나의 미래 대학원생들에게)
 
 * [RSS Pioneers들의 research statement](https://sites.google.com/view/rsspioneers2025/archive)
     * 날고 기는 Robotics/Robotic Vision 분야 박사 말년차 친구들이 오로지 2장짜리 글만으로 선정되는, 매우 경쟁이 치열한 글들임. 따라서 수준이 낮은 글은 모두 탈락하고, 좋은 글만 살아남아서 영어 공부할 때 문장들을 통째로 외워보는 것을 추천함. 특히, 이 research statement들의 intro에서는 robotics의 다른 분야 사람들도 이해를 할 수 있게 쉽게 쓰려고 노력한 흔적들이 많이 엿보이는데, 그런 테크닉들을 줍줍해보면 좋을듯      
@@ -134,12 +140,12 @@
 
 그래서 2023년 이후의 글들에서는 두 가지 요소를 모두 잡으려고 노력했으며, 그래서 대체로 잘 쓰여졌다고 생각한다(물론 내 기준임). 그리고 내가 논문 figure에 굉장히 진심이기 때문에, '좋은 figure'가 무엇일지도 생각해보면 좋을 것.
 
----
+______________________________________________________________________
 
-## Basic
+## :hammer: Basic
 
 * **중요1**: Latex에서 한 문장 당 한 줄에 쓸 것. Latex은 **Word처럼 문단 단위로 주저리주저리 쓰는게 아님!**.
-  * C++과 같은 compile 언어를 사용한다는 생각으로 '코딩'하는 거임 [#1](https://github.com/LimHyungTae/paper-writing-checklist/issues/1)
+  * C++과 같은 compile 언어를 사용한다는 생각으로 '코딩'하는 거임 [#1](https://github.com/LimHyungTae/latex-paper-writing-guide/issues/1)
   * 실제로 저는 24년부터 논문 writing도 vim으로 하는 걸로 완전히 정착함...*Latex은 '코딩'이다*!
       * (향후 이 관점에서 왜 overleaf을 쓰는게 fxxking shit인지 설명 예정)
     ![image](https://github.com/user-attachments/assets/aa76e84a-9b02-4fab-a153-6d419bdb6426)
@@ -278,9 +284,9 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
 \label{fig:overview}
 ```
 
----
+______________________________________________________________________
 
-## Misc
+## :bulb: Misc
 
 * %가 오르는 건지, %p가 오르는 건지 잘 분간해야 함.
   * 10%에서 20%로 오르면 10% 오른 게 아니라 100%오른 거고, 10%p가 오른 것임.
@@ -299,9 +305,9 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
   * Latex 파일 전체에서 검색: `grep -rn "TODO\|FIXME\|XXX\|TBD" *.tex`
   * 이런 게 남아 있는 채로 리뷰어에게 넘어간다? 바로 리젝임(필자도 이런 미완성된 manuscript를 여러 번 받아봤음)
 
----
+______________________________________________________________________
 
-# Figures \& Tables
+## :bar_chart: Figures \& Tables
 
 * 숫자가 있다면 단위가 잘 기입되었는지 반드시 확인하자.
     * 숫자 자체가 중요한 게 아니라 '무엇의' 숫자인지를 명시적으로 나타내는 게 훨씬 중요하다는 것을 잊지 말자.
@@ -329,13 +335,13 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
 * Figure 내 텍스트의 font size가 본문과 너무 동떨어지면 안 됨
   * Figure 내 글자가 너무 작아서 확대해야 읽히거나, 반대로 너무 크면 이질감이 들어서 보기 좋지 않음
 
----
+______________________________________________________________________
 
-# Structure of Manuscript
+## :page_facing_up: Structure of Manuscript
 
 논문을 한 번도 안 써본 이는 [나의 브런치 글](https://brunch.co.kr/@85a651d484d84f2)을 한 번 읽어보면 감이 오리라 생각된다.
 
-## Abstract
+### Abstract
 
 * 포맷 관련
    * Abstract는 manuscript와 완전히 독립된, 하나의 paragraph임
@@ -351,7 +357,7 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
          * 일반적으로 이 문제를 어떻게 해결할 수 있는지, 그리고 이 논문에서의 접근 방식이 특별한 이유는 무엇인가 + 수행한 핵심 내용과 새로운 점은 무엇인가를 강조하기
       * 실험을 통해 뭘 demonstrate했는지 1-2문장으로 작성
 
-## Introduction
+### Introduction
 
 아래와 같은 flow로 작성할 것
  
@@ -384,7 +390,7 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
   - 잘 모르겠으면 다음과 같이 시작하는 것이 좋습니다:
      - "The main contribution of this paper is a ..."
 
-## Related works
+### Related works
 
 * 포맷 관련
    * 페이지 수가 아무리 부족하더라도(e.g., ICRA의 6장 제한이나 RA-L의 8장 제한) Related works을 **생략하지는 말자**.
@@ -397,7 +403,7 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
       * 예를 들어, static map building 관련 연구인데 [ERASOR](https://arxiv.org/abs/2103.04316)나 [ERASOR2](https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/lim2023rss.pdf)가 인용에 없는 논문이 만약 나에게 리뷰가 온다면? 바로 빈정 상함 이슈로 '선행 연구가 불충분하다'라고 딴지 걸 수 있다.
    * 마지막 단락에서 '최종적으로 기존 연구들과는 요런 점들이 다르다'하는 것을 다시 한 번 더 강조
 
-## Methodology
+### Methodology
 
 * (내 취향) Section의 제목을 'Method', 혹은 'Methodology'라고 적지 말 것.
    * 이걸 모르는 이가 어디 있겠는가? 그러니 method가 정확히 뭘 위함인지 간지나게 한 번 더 표현해주는게 중요하다
@@ -423,7 +429,7 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
            * 그렇게 적으면 reviewer가 *"나머지 2개에서는 더 안 좋은데 어떻게 better라고 말할 수 있냐"* 하고 딴지 걸 수 있음
            * (o) "Our method achieved lower RMSE on 8 out of 10 sequences, while showing comparable performance on the remaining two."
 
-## Experiment results
+### Experiment results
 
 * 논문의 결과를 단순히 표(Table)로만 제시하는 것보다, 다양한 형태의 표현(e.g., 그래프, 시각적 비교, 도식화)을 활용하는 것이 중요
    * 표는 N > 5인 baseline들과 비교할 때 수치를 명확하게 전달하는 데 유용하지만, 직관적인 이해를 돕는 건 graph가 더 효과적
@@ -431,7 +437,7 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
   * e.g., "To validate the robustness of our method under noisy conditions, we evaluate on..."
 * Ablation study에서 각 component를 제거/변경했을 때의 결과를 보여줄 때, **methodology section의 어느 부분에 해당하는지**도 명시적으로 연결해 주면 독자가 이해하기 쉬움
 
-## Conclusion
+### Conclusion
 
 * 사실 논문의 당락에 크게 영향을 미치지는 않음.
 * 교수님에 따라 현재 완료형(have proposed. 현재까지 유효하다는 의미를 내포)이나 과거형(proposed. 무튼 논문이 이미 완료되었음을 강조)을 사용하는 취향이 다를 수 있으므로, 연구실에서 이전에 낸 논문들 꼭 참고할 것
@@ -442,7 +448,7 @@ Formally, let us assume that the $\corridx$-th pair (or the $\corridx$-th corres
         * Example 1. [KISS-Matcher](https://arxiv.org/pdf/2409.15615)에서는 "In future works, we plan to apply our matching pipeline in mapping and localization applications."
         * Example 2. [BUFFER-X](https://arxiv.org/pdf/2503.07940)에서는 "In future works, we plan to study how to boost the inference speed for better usability."  
 
-## Acknowledgements
+### Acknowledgements
 
 LaTeX 문서에서 Acknowledgments’(감사의 말) 섹션을 작성할 때는 section에 *을 붙여야 함. *을 붙이게 되면 문서 목차에는 포함되지 않지만, 해당 위치에 제목이 출력됨
 
@@ -451,9 +457,9 @@ LaTeX 문서에서 Acknowledgments’(감사의 말) 섹션을 작성할 때는 
 \section*{Acknowledgments}
 ```
 
----
+______________________________________________________________________
 
-# Related Repositories
+## :link: Related Repositories
 
 논문 작성을 도와주는 관련 레포지토리들. 함께 보면 시너지가 큼.
 
