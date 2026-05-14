@@ -4,12 +4,19 @@
 
 <p><strong><em>철저히 나의 취향이 반영된 writing 체크리스트.</em></strong></p>
 
+<p><a href="https://limhyungtae.github.io/latex-paper-writing-guide/">Website</a></p>
+
 </div>
 
 이 글은 향후 내가 임용된 후 대학원생들의 논문을 검토할 때, 같은 말을 각 학생에게 반복해서 설명하는 행위를 그나마 덜 하기 위해 작성하게 되었다. 시간이 날 때마다 지금까지 배워온 writing 관련 내용을 정리하여 하나씩 추가해 갈 예정이다.
 
 이는 철저히 **나의 취향이 반영된 writing 체크리스트**이다. 사실, 일부 항목은 right/wrong(반드시 따라야 할 것)이고, 일부는 better/worse(따르면 좋은 것)의 영역이지만, 아는 만큼 보인다고 하지 않는가.
 논문을 쓰기 전에 한 번 읽고, 교수님께 논문을 드리기 전에 한 번 읽고 스스로 다시 찬찬히 살펴본 후 교수님께 v1 논문을 드리면 🎓✨당신도 할 수 있다! @박사 3년 졸업★ ✨🎓 ~(아님 말고)~
+
+## 배포
+
+정적 사이트는 `docs/index.html`에서 제공되며, `master` 브랜치에 push되면 `.github/workflows/pages.yml` workflow가 `docs/` 폴더를 GitHub Pages로 배포한다.
+GitHub Pages가 아직 활성화되어 있지 않다면 repository Settings → Pages에서 Source를 **GitHub Actions**로 한 번 설정해야 한다.
 
 ______________________________________________________________________
 
