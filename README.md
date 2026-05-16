@@ -143,7 +143,7 @@ ______________________________________________________________________
 
 <img width="350" alt="image" src="https://github.com/user-attachments/assets/4833729c-df28-4928-908e-688ae539b7ce" />
 
-(+ Cyrill 교수님의 이 [scientific writing 강좌](https://www.youtube.com/watch?v=QYbAvOPcy0s&t=1153s)를 꼭 볼 것을 추천)
+(+ 나의 scientific writing은 Cyrill Stachniss를 만나기 전과 후로 나뉜다. 늘 kudos to Cyrill Stachniss! 그리고 Cyrill 교수님의 이 [scientific writing 강좌](https://www.youtube.com/watch?v=QYbAvOPcy0s&t=1153s)를 꼭 볼 것을 추천)
 
 그래서 2023년 이후의 글들에서는 두 가지 요소를 모두 잡으려고 노력했으며, 그래서 대체로 잘 쓰여졌다고 생각한다(물론 내 기준임). 그리고 내가 논문 figure에 굉장히 진심이기 때문에, '좋은 figure'가 무엇일지도 생각해보면 좋을 것.
 
