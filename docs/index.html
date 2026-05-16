@@ -301,6 +301,31 @@
       display: block;
       animation: fadeUp .25s ease-out;
     }
+    .author-card-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 132px;
+      gap: 22px;
+      align-items: start;
+    }
+    .author-copy {
+      min-width: 0;
+    }
+    .author-portrait-wrap {
+      margin: 0;
+      justify-self: end;
+    }
+    .author-portrait {
+      display: block;
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      border: 4px solid #ffffff;
+      outline: 1px solid rgba(220, 38, 38, 0.28);
+      box-shadow: 0 10px 24px rgba(17, 24, 39, 0.13);
+      background: #f3f4f6;
+    }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(6px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -369,6 +394,30 @@
       margin-left: 1px;
     }
     .author-links a:hover::after { color: var(--accent); }
+
+    @media (max-width: 640px) {
+      .author-card {
+        padding: 20px;
+      }
+      .author-card-inner {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .author-portrait-wrap {
+        grid-row: 1;
+        justify-self: center;
+      }
+      .author-copy {
+        grid-row: 2;
+      }
+      .author-head {
+        justify-content: center;
+        text-align: center;
+      }
+      .author-focus {
+        text-align: center;
+      }
+    }
 
     .section p { color: #1f2937; }
     .section ul, .section ol {
@@ -792,26 +841,33 @@
           <span class="close-label">× <span data-lang="en">Close</span><span data-lang="ko">닫기</span></span>
         </button>
         <div class="author-card" id="author-card" role="region" aria-label="About the author">
-          <div class="author-head">
-            <h3>
-              <span data-lang="en">Hyungtae Lim, Ph.D.</span>
-              <span data-lang="ko">임형태 (Hyungtae Lim, Ph.D.)</span>
-            </h3>
-            <span class="author-role">Postdoctoral Associate · MIT SPARK Lab</span>
-          </div>
-          <p class="author-focus">
-            <span data-lang="en">Cares deeply about the craft of scientific paper writing: clarity, structure, and reader-first prose.</span>
-            <span data-lang="ko">Scientific paper writing의 craft, 즉 명료함, 구조, 그리고 독자 우선 문장에 진심.</span>
-          </p>
-          <p class="author-bio">
-            <span data-lang="en">Hyungtae Lim is a Postdoctoral Associate at MIT's SPARK Lab, working with Prof. Luca Carlone. He earned his M.S. (2020) and Ph.D. (2023) in Electrical Engineering from KAIST under Prof. Hyun Myung, after receiving his B.S. in Mechanical Engineering from the same institution in 2018. In 2022 he spent time as a visiting scholar in Prof. Cyrill Stachniss's group at the University of Bonn, where he was (gratefully) retrained on what "writing that's easy to read" actually means. Beyond his research on robust robotic perception, SLAM, and state estimation, he is deeply invested in the craft of scientific paper writing, both as the 2022 IEEE RA-L Best Paper Award recipient and as an Associate Editor for IEEE RA-L, where he reads dozens of manuscripts each year. This checklist is the consolidated set of writing rules he wishes he had been taught earlier, and that he wants to pass on to his future graduate students.</span>
-            <span data-lang="ko">임형태는 MIT SPARK Lab에서 Luca Carlone 교수 아래 Postdoctoral Associate으로 일하고 있으며, 2020·2023년 KAIST에서 명현 교수의 지도 하에 전기 및 전자공학 석사·박사 학위를 받았고, 2018년에는 KAIST 기계공학과를 졸업했습니다. 2022년에는 University of Bonn의 Cyrill Stachniss 교수 랩에 visiting scholar로 머물며 (감사하게도) '독자가 읽기 편한 글을 쓰는 법'에 대해 혹독한 트레이닝을 받기도 했습니다. Robust robotic perception, SLAM, state estimation 연구를 주로 하지만, 그 못지않게 scientific writing craft에도 관심이 많습니다. 2022 IEEE RA-L Best Paper Award 수상자이자 IEEE RA-L의 Associate Editor로서 매년 수십 편의 manuscript를 직접 review하고 있으며, 이 체크리스트는 박사 과정 동안 본인이 진작 배웠으면 좋았겠다 싶은 writing rule들을 future 대학원생들과 공유하기 위해 정리한 것입니다.</span>
-          </p>
-          <div class="author-links">
-            <a href="https://limhyungtae.github.io" target="_blank" rel="noreferrer"><span data-lang="en">Personal site</span><span data-lang="ko">개인 사이트</span></a>
-            <a href="https://github.com/LimHyungTae" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://scholar.google.com/citations?user=GAdEUgUAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
-            <a href="mailto:shapelim@mit.edu">Email</a>
+          <div class="author-card-inner">
+            <div class="author-copy">
+              <div class="author-head">
+                <h3>
+                  <span data-lang="en">Hyungtae Lim, Ph.D.</span>
+                  <span data-lang="ko">임형태 (Hyungtae Lim, Ph.D.)</span>
+                </h3>
+                <span class="author-role">Postdoctoral Associate · MIT SPARK Lab</span>
+              </div>
+              <p class="author-focus">
+                <span data-lang="en">Cares deeply about the craft of scientific paper writing: clarity, structure, and reader-first prose.</span>
+                <span data-lang="ko">Scientific paper writing의 craft, 즉 명료함, 구조, 그리고 독자 우선 문장에 진심.</span>
+              </p>
+              <p class="author-bio">
+                <span data-lang="en">Hyungtae Lim is a Postdoctoral Associate at MIT's SPARK Lab, working with Prof. Luca Carlone. He earned his M.S. (2020) and Ph.D. (2023) in Electrical Engineering from KAIST under Prof. Hyun Myung, after receiving his B.S. in Mechanical Engineering from the same institution in 2018. In 2022 he spent time as a visiting scholar in Prof. Cyrill Stachniss's group at the University of Bonn, where he was (gratefully) retrained on what "writing that's easy to read" actually means. Beyond his research on robust robotic perception, SLAM, and state estimation, he is deeply invested in the craft of scientific paper writing, both as the 2022 IEEE RA-L Best Paper Award recipient and as an Associate Editor for IEEE RA-L, where he reads dozens of manuscripts each year. This checklist is the consolidated set of writing rules he wishes he had been taught earlier, and that he wants to pass on to his future graduate students.</span>
+                <span data-lang="ko">임형태는 MIT SPARK Lab에서 Luca Carlone 교수 아래 Postdoctoral Associate으로 일하고 있으며, 2020·2023년 KAIST에서 명현 교수의 지도 하에 전기 및 전자공학 석사·박사 학위를 받았고, 2018년에는 KAIST 기계공학과를 졸업했습니다. 2022년에는 University of Bonn의 Cyrill Stachniss 교수 랩에 visiting scholar로 머물며 (감사하게도) '독자가 읽기 편한 글을 쓰는 법'에 대해 혹독한 트레이닝을 받기도 했습니다. Robust robotic perception, SLAM, state estimation 연구를 주로 하지만, 그 못지않게 scientific writing craft에도 관심이 많습니다. 2022 IEEE RA-L Best Paper Award 수상자이자 IEEE RA-L의 Associate Editor로서 매년 수십 편의 manuscript를 직접 review하고 있으며, 이 체크리스트는 박사 과정 동안 본인이 진작 배웠으면 좋았겠다 싶은 writing rule들을 future 대학원생들과 공유하기 위해 정리한 것입니다.</span>
+              </p>
+              <div class="author-links">
+                <a href="https://limhyungtae.github.io" target="_blank" rel="noreferrer"><span data-lang="en">Personal site</span><span data-lang="ko">개인 사이트</span></a>
+                <a href="https://github.com/LimHyungTae" target="_blank" rel="noreferrer">GitHub</a>
+                <a href="https://scholar.google.com/citations?user=GAdEUgUAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
+                <a href="mailto:shapelim@mit.edu">Email</a>
+              </div>
+            </div>
+            <figure class="author-portrait-wrap">
+              <img class="author-portrait" src="assets/hyungtae-profile.png" width="438" height="438" loading="lazy" alt="Portrait of Hyungtae Lim" />
+            </figure>
           </div>
         </div>
       </div>
