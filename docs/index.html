@@ -396,8 +396,26 @@
       word-break: break-word;
     }
 
+    /* Code snippets are authored as <pre><code class="language-*">.
+       Keep the inline-code pill from leaking into Prism blocks. */
+    code[class*="language-"],
+    code[class*="language-"] *,
+    pre code[class*="language-"],
+    pre code[class*="language-"] *,
+    pre[class*="language-"] code,
+    pre[class*="language-"] code *,
+    pre[class*="language-"] .token,
+    pre[class*="language-"] .token * {
+      background: transparent !important;
+      padding: 0 !important;
+      border-radius: 0 !important;
+    }
+
     /* Prism code blocks: override theme defaults for consistency & visibility */
     pre[class*="language-"],
+    pre:has(> code[class*="language-"]),
+    code[class*="language-"],
+    pre code[class*="language-"],
     pre[class*="language-"] code,
     pre[class*="language-"] code[class*="language-"] {
       font-family: var(--mono) !important;
@@ -407,9 +425,11 @@
       line-height: 1.55;
       tab-size: 2;
     }
-    pre[class*="language-"] {
+    pre[class*="language-"],
+    pre:has(> code[class*="language-"]) {
       background: #0b1020 !important;
       color: #e5e7eb !important;
+      border: 0 !important;
       border-radius: 14px;
       padding: 16px 18px;
       margin: 12px 0;
@@ -640,19 +660,6 @@
       color: var(--muted);
     }
 
-    /* TOC */
-    .toc {
-      background: #fbfdff;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 14px 18px;
-      margin-top: 22px;
-    }
-    .toc ol { padding-left: 22px; margin: 6px 0; }
-    .toc li { margin: 3px 0; font-size: 14.5px; }
-    .toc a { color: #1f2937; text-decoration: none; }
-    .toc a:hover { color: var(--accent); text-decoration: underline; }
-
     /* Footer */
     footer {
       margin-top: 28px;
@@ -699,19 +706,19 @@
       .lang-btn { padding: 7px 12px; font-size: 12px; }
       .lang-toggle { box-shadow: none; }
 
-      .toc { padding: 12px 14px; }
-      .toc li { font-size: 13.5px; }
-
       .compare { gap: 10px; margin: 12px 0; }
       .compare > .col { padding: 12px 12px; border-radius: 12px; }
       .compare .label { font-size: 11px; margin-bottom: 6px; }
 
       pre[class*="language-"],
+      pre:has(> code[class*="language-"]),
+      pre code[class*="language-"],
       pre[class*="language-"] code {
         font-size: 12px !important;
         line-height: 1.5;
       }
-      pre[class*="language-"] {
+      pre[class*="language-"],
+      pre:has(> code[class*="language-"]) {
         padding: 12px 12px;
         border-radius: 10px;
       }
@@ -738,7 +745,8 @@
 
     @media (max-width: 380px) {
       h1 { font-size: 30px; line-height: 1.1; }
-      pre[class*="language-"] code { font-size: 11.5px !important; }
+      pre[class*="language-"] code,
+      pre code[class*="language-"] { font-size: 11.5px !important; }
     }
   </style>
 </head>
@@ -777,23 +785,6 @@
           이 글은 향후 내가 임용된 후 대학원생들의 논문을 검토할 때, 같은 말을 각 학생에게 반복해서 설명하는 행위를 그나마 덜 하기 위해 작성하게 되었다. 이는 철저히 <b>나의 취향이 반영된 writing 체크리스트</b>이며, 일부 항목은 right/wrong(반드시 따라야 할 것)이고 일부는 better/worse(따르면 좋은 것)의 영역이다. 논문을 쓰기 전에 한 번 읽고, 교수님께 논문을 드리기 전에 다시 한 번 살펴본 후 v1 논문을 드리면 🎓✨ 당신도 할 수 있다! @박사 3년 졸업★ ✨🎓 ~(아님 말고)~
         </span>
       </p>
-
-      <nav class="toc" aria-label="Table of contents">
-        <strong>
-          <span data-lang="en">Contents</span>
-          <span data-lang="ko">목차</span>
-        </strong>
-        <ol>
-          <li><a href="#mindset"><span data-lang="en">1. Mindset before writing</span><span data-lang="ko">1. 논문을 쓸 때의 마음가짐</span></a></li>
-          <li><a href="#english-tips"><span data-lang="en">2. English writing tips that immediately help</span><span data-lang="ko">2. 당장 도움되는 English Writing Tips</span></a></li>
-          <li><a href="#basic"><span data-lang="en">3. LaTeX basics: the rules that will save you</span><span data-lang="ko">3. LaTeX 기본기: 당신을 살릴 규칙들</span></a></li>
-          <li><a href="#misc"><span data-lang="en">4. Miscellaneous</span><span data-lang="ko">4. 기타 (Misc)</span></a></li>
-          <li><a href="#figtab"><span data-lang="en">5. Figures &amp; tables</span><span data-lang="ko">5. Figures &amp; Tables</span></a></li>
-          <li><a href="#structure"><span data-lang="en">6. Manuscript structure</span><span data-lang="ko">6. 논문의 구조</span></a></li>
-          <li><a href="#repos"><span data-lang="en">7. Related repositories</span><span data-lang="ko">7. 관련 레포지토리</span></a></li>
-          <li><a href="#reading"><span data-lang="en">Appendix. Recommended reading for English study</span><span data-lang="ko">부록. 영어 공부할 때 읽어보면 좋은 글/논문들</span></a></li>
-        </ol>
-      </nav>
 
       <div class="author-toggle-wrap">
         <button class="author-toggle-btn" type="button" id="author-toggle" aria-expanded="false" aria-controls="author-card">
